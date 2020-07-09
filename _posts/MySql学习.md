@@ -1,3 +1,10 @@
+---
+layout: post
+title: MySql学习
+date: 2020-07-09
+categories: db
+tags: db 
+---
 [TOC]
 
 # 介绍

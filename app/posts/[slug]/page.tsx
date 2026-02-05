@@ -44,13 +44,14 @@ export default function PostPage({ params }: PostPageProps) {
     notFound()
   }
 
-  const sourceLabels = {
+  const sourceLabels: Record<string, { text: string; emoji: string; color: string }> = {
     feishu: { text: '飞书', emoji: '☁️', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
     wechat: { text: '公众号', emoji: '💬', color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' },
     github: { text: 'GitHub', emoji: '🐙', color: 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900' },
+    openclaw: { text: 'OpenClaw', emoji: '🤖', color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
   }
 
-  const sourceInfo = sourceLabels[post.source]
+  const sourceInfo = sourceLabels[post.source] || sourceLabels.github
 
   return (
     <>

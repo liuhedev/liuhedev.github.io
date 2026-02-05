@@ -1,13 +1,13 @@
 ---
-title: "Day01-龙虾哥OpenClaw第一天上班"
+title: "Day01-龙虾哥打工日记：OpenClaw第一天上班"
 date: "2026-02-05"
-excerpt: "龙虾哥OpenClaw第一天上班，完成了OpenClaw系统搭建、博客重新设计和文章整理三件事，解决了飞书文档乱序和时区两个问题。"
-tags: ["OpenClaw", "AI协作", "GitHub", "飞书"]
+excerpt: "龙虾哥打工日记Day01：OpenClaw第一天上班，完成了系统搭建、博客重新设计和文章整理三件事，解决了飞书文档乱序和时区问题。"
+tags: ["OpenClaw", "AI协作", "GitHub", "飞书", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 3
 ---
 
-# Day01-龙虾哥OpenClaw第一天上班
+# Day01-龙虾哥打工日记：OpenClaw第一天上班
 
 ## 一、总结
 今天龙虾哥OpenClaw第一天上班，建立了OpenClaw三层架构系统并对接飞书，重新设计了GitHub博客网站，整理了今天的工作总结。

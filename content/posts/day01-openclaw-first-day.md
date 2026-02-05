@@ -29,7 +29,6 @@ readingTime: 3
 ### 2. 使用UI-UX Pro Max Skill重新设计博客
 使用UI-UX Pro Max Skill对GitHub博客网站进行了全面重新设计。新的设计采用Next.js + Tailwind技术栈，优化了用户体验和界面交互。
 
-设计重点包括响应式布局、现代视觉风格和高效的内容展示方式，相比之前的cursor风格有了显著提升。
 
 ![博客主页（黑暗模式）](/blog-homepage-dark.png)
 

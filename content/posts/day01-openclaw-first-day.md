@@ -15,9 +15,7 @@ readingTime: 3
 ## 二、具体的事
 
 ### 1. 搭建OpenClaw并对接飞书
-建立了OpenClaw三层架构系统：OpenClaw操作层、GitHub同步层、飞书分享层。设置自动化每日同步，每天23:00自动将今日工作提交到GitHub。
-
-通过OpenClaw实现AI助手实时协作，飞书用于团队知识分享，GitHub用于版本化记忆存储。系统现在可以自动同步所有对话记忆，确保知识不丢失。
+搭建了OpenClaw并对接飞书机器人，每天晚上23点将今日的工作整理同步到GitHub上。
 
 ![OpenClaw控制界面](/openclaw-dashboard.png)
 

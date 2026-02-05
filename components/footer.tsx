@@ -21,7 +21,7 @@ export function Footer() {
               刘贺同学
             </h3>
             <p className="text-sm text-secondary dark:text-secondary-dark">
-              全栈工程师 · 微信公众号"刘贺同学"
+              全栈工程师 · 微信公众号&ldquo;刘贺同学&rdquo;
             </p>
           </div>
 

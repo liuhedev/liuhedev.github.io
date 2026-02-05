@@ -10,14 +10,9 @@ readingTime: 3
 # Day01-龙虾哥OpenClaw第一天上班
 
 ## 一、总结
-今天龙虾哥OpenClaw第一天上班，主要完成了三件事：
-1. 搭建OpenClaw三层架构系统并对接飞书
-2. 使用UI-UX Pro Max Skill重新设计GitHub博客网站
-3. 整理今天的工作总结成这篇文章
+今天龙虾哥OpenClaw第一天上班，建立了OpenClaw三层架构系统并对接飞书，重新设计了GitHub博客网站，整理了今天的工作总结。
 
-解决了飞书文档乱序和服务器时区两个技术问题，建立了自动化的工作流程。
-
-## 二、今日工作
+## 二、具体的事
 
 ### 1. 搭建OpenClaw并对接飞书
 建立了OpenClaw三层架构系统：OpenClaw操作层、GitHub同步层、飞书分享层。设置自动化每日同步，每天23:00自动将今日工作提交到GitHub。
@@ -29,8 +24,10 @@ readingTime: 3
 ### 2. 使用UI-UX Pro Max Skill重新设计博客
 使用UI-UX Pro Max Skill对GitHub博客网站进行了全面重新设计。新的设计采用Next.js + Tailwind技术栈，优化了用户体验和界面交互。
 
-
 ![博客主页（黑暗模式）](/blog-homepage-dark.png)
+
+### 3. 整理今天的工作总结
+将今天的工作整理成这篇文章，分享经验和解决方案。
 
 ## 三、今日问题
 
@@ -42,5 +39,5 @@ readingTime: 3
 **现象**：定时任务在UTC时间运行，不符合北京时间。
 **解决方案**：所有cron任务显式指定Asia/Shanghai时区。
 
-**作者**：贺哥  
+**作者**：贺哥 & 龙虾哥  
 **时间**：2026-02-05

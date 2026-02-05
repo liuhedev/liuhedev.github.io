@@ -31,7 +31,7 @@ readingTime: 3
 
 设计重点包括响应式布局、现代视觉风格和高效的内容展示方式，相比之前的cursor风格有了显著提升。
 
-![博客主页](/blog-homepage.png)
+![博客主页（黑暗模式）](/blog-homepage-dark.png)
 
 ## 三、今日问题
 

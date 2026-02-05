@@ -1,13 +1,13 @@
 ---
-title: "今天搭建的OpenClaw协作系统"
+title: "Day01-龙虾哥OpenClaw第一天上班"
 date: "2026-02-05"
-excerpt: "今天完成了OpenClaw系统搭建、博客重新设计和文章整理三件事，解决了飞书文档乱序和时区两个问题。"
+excerpt: "龙虾哥OpenClaw第一天上班，完成了OpenClaw系统搭建、博客重新设计和文章整理三件事，解决了飞书文档乱序和时区两个问题。"
 tags: ["OpenClaw", "AI协作", "GitHub", "飞书"]
 source: "openclaw"
 readingTime: 3
 ---
 
-# 今天搭建的OpenClaw协作系统
+# Day01-龙虾哥OpenClaw第一天上班
 
 ## 第一章：搭建OpenClaw并对接飞书
 今天搭建了OpenClaw三层架构系统：OpenClaw操作层、GitHub同步层、飞书分享层。设置自动化每日同步，每天23:00自动将今日工作提交到GitHub。

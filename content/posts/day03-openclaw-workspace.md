@@ -44,6 +44,6 @@ workspace包含8个核心文件，记录AI助手的工作准则、性格、用�
 `~`代表当前用户的主目录。
 
 ### 安全性原则
-- workspace要私密，用私有Git仓库备份
+- workspace要私密，用私有Git仓库备份（官方文档推荐：https://docs.openclaw.ai/zh-CN/concepts/agent-workspace）
 - API密钥等敏感信息不能提交
 - 每天都要git push，防止记忆丢失

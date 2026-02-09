@@ -36,7 +36,7 @@ workspace包含8个核心文件，记录AI助手的工作准则、性格、用�
 5. **TOOLS.md**：工具配置（宝玉技能、微信API等）
 6. **HEARTBEAT.md**：心跳检查（每天自动检查啥）
 7. **MEMORY.md**：长期记忆（重要事情记下来）
-8. **memory/**目录：每日日志（Day01-Day03）
+8. **memory/** 目录：每日日志（Day01-Day03）
 
 ### 默认位置
 `~/.openclaw/workspace`

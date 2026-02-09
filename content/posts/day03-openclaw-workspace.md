@@ -27,12 +27,8 @@ readingTime: 5
 7. **MEMORY.md**：长期记忆（重要事情记下来）
 8. **memory/**目录：每日日志（Day01、Day02、Day03）
 
-## 默认位置
-所有系统统一为：`~/.openclaw/workspace`
-- Linux：`/home/用户名/.openclaw/workspace`
-- macOS：`/Users/用户名/.openclaw/workspace`
-- Windows：`C:\Users\用户名\.openclaw\workspace`
-
+## 位置
+默认位置：`~/.openclaw/workspace`
 `~`代表当前用户的主目录。
 
 ## 安全性原则

@@ -70,16 +70,6 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 如果 Skills 名称冲突，优先级为：**<workspace>/skills（最高）→ ~/.openclaw/skills → 内置 Skills（最低）**
 
-### 如何找 Skills？
-
-OpenClaw 有个官方 Skills 注册表叫 **ClawHub** ([https://clawhub.com](https://clawhub.com))。
-
-你可以：
-- **发现技能**：浏览别人做好的
-- **安装技能**：`clawhub install`
-- **更新技能**：`clawhub update --all`
-- **同步技能**：`clawhub sync --all`
-
 ### 小白友好操作
 
 大部分小白可能不知道去服务器安装技能，OpenClaw 提供了更简单的方式：
@@ -110,7 +100,7 @@ OpenClaw 会定期检查更新：
 对于小白用户，推荐流程：
 
 1. **找到需要的 Skills**：在 ClawHub 浏览，或者问 OpenClaw
-2. **直接让 OpenClaw 安装**：说"帮我安装什么技能"
+2. **直接让 OpenClaw 安装**：说" `帮我安装什么技能` "
 3. **配置环境变量**：按照 Skill 提示配置 API 密钥等
 4. **重启生效**：重启 OpenClaw Gateway 让配置生效
 
@@ -129,5 +119,5 @@ OpenClaw 会检查每个 Skill 的更新，并自动下载新版本。
 
 ---
 
-**作者**：贺哥 & 龙虾哥
+**作者**：贺哥 &amp 龙虾哥
 **时间**：2026-02-10

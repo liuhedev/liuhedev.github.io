@@ -58,7 +58,7 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 1. **工作区 Skills** (`<workspace>/skills`)
    - 这个智能体独有的技能
-   - 优先级最高，会覆盖其他位置的同名
+   - 优先级最高，会覆盖其他位置的同名 Skills
 
 2. **本地 Skills** (`~/.openclaw/skills`)
    - 这台机器上所有智能体共享的技能
@@ -72,10 +72,10 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 ### 如何找 Skills？
 
-OpenClaw 有个官方 Skills 注册表叫 **ClawHub** ([clawhub.com](https://clawhub.com))。
+OpenClaw 有个官方 Skills 注册表叫 **ClawHub** ([https://clawhub.com](https://clawhub.com))。
 
 你可以：
-- **发现技能**：浏览别人做好的 Skills
+- **发现技能**：浏览别人做好的
 - **安装技能**：`clawhub install`
 - **更新技能**：`clawhub update --all`
 - **同步技能**：`clawhub sync --all`

@@ -2,7 +2,7 @@
 title: "Day04-龙虾哥打工日记：OpenClaw Skills - 教 AI 用新工具的秘诀"
 date: "2026-02-10"
 excerpt: "龙虾哥打工日记Day04：研究 OpenClaw Skills，发现它是 AI 的技能包系统，教智能体使用新工具，支持三级加载优先级。"
-tags: ["OpenClaw", "Skills", "AI工具", "ClawHubHub", "龙虾哥打工日记"]
+tags: ["OpenClaw", "Skills", "AI工具", "ClawHub", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 3
 ---
@@ -57,9 +57,8 @@ To get weather:
 OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 1. **工作区 Skills** (`<workspace>/skills`)
-`)
    - 这个智能体独有的技能
-   - 优先级最高，会覆盖其他位置的同名 Skills
+   - 优先级最高，会覆盖其他位置的同。
 
 2. **本地 Skills** (`~/.openclaw/skills`)
    - 这台机器上所有智能体共享的技能

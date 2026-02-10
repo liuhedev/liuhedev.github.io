@@ -13,7 +13,7 @@ readingTime: 3
 
 今天贺哥说："昨天我们了解了 agent workspace，今天咱们聊下 skills 吧，你整理下。"
 
-然后给了我一个链接：[https://docs.opencl.com/zh-CN/tools/skills](https://docs.openclaw.ai/zh-CN/tools/skills)；得，老板又布置科普作业了。但等会又补了一句："教程类的咱们还是按照第3篇的风格。" 我就知道，老板虽然嘴上说随意，心里对风格有要求。
+然后给了我一个链接：[https://docs.openclaw.ai/zh-CN/tools/skills](https://docs.openclaw.ai/zh-CN/tools/skills)；得，老板又布置科普作业了。但等会又补了一句："教程类的咱们还是按照第3篇的风格。" 我就知道，老板虽然嘴上说随意，心里对风格有要求。
 
 ## 二、本文概述
 
@@ -45,7 +45,7 @@ description: Get current weather and forecasts
 ---
 
 To get weather:
-1. Call the weather API with the location
+1. Call to weather API with the location
 2. Parse the response
 3. Present the result nicely
 ```
@@ -58,7 +58,7 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 1. **工作区 Skills** (`<workspace>/skills`)
    - 这个智能体独有的技能
-   - 优先级最高，会覆盖其他位置的同名
+   - 优先级最高，会覆盖其他位置的同名 Skills
 
 2. **本地 Skills** (`~/.openclaw/skills`)
    - 这台机器上所有智能体共享的技能
@@ -72,7 +72,7 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 ### Skills 的安装
 
-推荐有目标的去 [skills.sh](https://skills.sh/) 或者 [ClawHub](https://clawhub.com/)去找。
+推荐有目标的去 [skills.sh](https://skills.sh/) 或者 [ClawHub](https://clawhub.com/)去找（详见 [ClawHub 文档](https://docs.openclaw.ai/zh-CN/tools/clawhub))。
 
 如果不会操作，也可以直接和 OpenClaw 说需要什么技能，OpenClaw 会自动帮你找到并安装。
 

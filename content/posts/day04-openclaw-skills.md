@@ -60,7 +60,7 @@ To get weather:
 
 OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
-1. **工作区 Skills** (`/skills`)
+1. **工作区 Skills** (`~/.openclaw/workspace/skills`)
    - 这个智能体独有的技能
    - 优先级最高，会覆盖其他位置的同名 Skills
 

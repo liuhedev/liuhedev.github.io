@@ -60,7 +60,7 @@ To get weather:
 
 OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
-1. **工作区 Skills** (`~/.openclaw/workspace/skills`)
+1. **工作区 Skills** (`<workspace>/skills`)
    - 这个智能体独有的技能
    - 优先级最高，会覆盖其他位置的同名 Skills
 
@@ -70,9 +70,9 @@ OpenClaw 从三个地方加载 Skills，**优先级从高到低**：
 
 3. **内置 Skills**
    - OpenClaw 自带的技能
-   - 跟着安装包一起来的
+   - 跟着安装包一起来
 
-记住这个优先级：**工作区 > 本地 > 内置**
+如果 Skills 名称冲突，优先级为：**<workspace>/skills（最高）→ ~/.openclaw/skills → 内置 Skills（最低）**
 
 ### 如何找 Skills？
 

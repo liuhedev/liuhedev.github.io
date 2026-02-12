@@ -50,6 +50,8 @@ __pycache__/
 *.md.backup
 *.tmp
 *.log
+*.html
+*.html.bak*
 
 # IDE 配置
 .vscode/

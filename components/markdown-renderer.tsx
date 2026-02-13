@@ -28,6 +28,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
         components={{
+          h1: () => null,
           h2: ({ children, ...props }) => {
             const text = String(children).replace(/[`*_~]/g, '')
             const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '')

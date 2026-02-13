@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react'
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import { MarkdownRenderer } from '@/components/markdown-renderer'
+import { TableOfContents } from '@/components/table-of-contents'
 import { Footer } from '@/components/footer'
 import { ThemeToggle } from '@/components/theme-toggle'
 
@@ -125,8 +126,11 @@ export default function PostPage({ params }: PostPageProps) {
             )}
           </header>
 
-          {/* Article Content */}
-          <div className="max-w-3xl mx-auto">
+          {/* Article Content + TOC */}
+          <div className="max-w-3xl mx-auto relative">
+            <div className="absolute left-full ml-8 top-0 w-56">
+              <TableOfContents content={post.content} />
+            </div>
             <MarkdownRenderer content={post.content} />
           </div>
 

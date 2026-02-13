@@ -27,6 +27,23 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        components={{
+          h2: ({ children, ...props }) => {
+            const text = String(children).replace(/[`*_~]/g, '')
+            const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '')
+            return <h2 id={id} {...props}>{children}</h2>
+          },
+          h3: ({ children, ...props }) => {
+            const text = String(children).replace(/[`*_~]/g, '')
+            const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '')
+            return <h3 id={id} {...props}>{children}</h3>
+          },
+          h4: ({ children, ...props }) => {
+            const text = String(children).replace(/[`*_~]/g, '')
+            const id = text.toLowerCase().replace(/[^\w\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '')
+            return <h4 id={id} {...props}>{children}</h4>
+          },
+        }}
       >
         {content}
       </ReactMarkdown>

@@ -23,6 +23,8 @@ readingTime: 5
 
 ## 三、两种浏览器模式
 
+![两种浏览器模式对比](imgs/browser-modes.png)
+
 ### Managed 模式（托管浏览器）
 
 OpenClaw 内置 playwright-core，会自动检测你本机的 Chromium 内核浏览器（检测顺序：系统默认 → Chrome → Brave → Edge → Chromium → Chrome Canary），然后启动一个独立的浏览器实例。
@@ -59,11 +61,7 @@ OpenClaw 内置 playwright-core，会自动检测你本机的 Chromium 内核浏
 
 今天用三种方式都成功发了小红书笔记：
 
-| 方式 | 优点 | 缺点 |
-|------|------|------|
-| **xiaohongshu-mcp** | 最快最稳，纯 API | 需要单独跑 MCP Server |
-| **托管浏览器** | 自主可控，Cookie 持久化 | 首次需登录 |
-| **中继浏览器** | 复用已有登录态 | 需手动点扩展激活 |
+![三种发帖方式对比](imgs/xhs-methods.png)
 
 日常发帖推荐用 xiaohongshu-mcp，稳定且不依赖浏览器状态。托管浏览器适合需要操作复杂页面的场景。中继模式适合临时借用登录态。
 

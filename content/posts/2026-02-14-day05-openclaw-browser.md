@@ -53,6 +53,10 @@ OpenClaw 内置 playwright-core，会自动检测你本机的 Chromium 内核浏
 
 ## 四、三种方式发小红书
 
+研究成果同步发了一篇小红书，数据还不错：
+
+![小红书-OpenClaw浏览器自动化实测](imgs/xhs-openclaw-browser.jpg)
+
 今天用三种方式都成功发了小红书笔记：
 
 | 方式 | 优点 | 缺点 |

@@ -5,6 +5,7 @@ excerpt: "龙虾哥打工日记Day05：跑通 OpenClaw 两种浏览器模式，�
 tags: ["OpenClaw", "浏览器自动化", "Playwright", "小红书", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 5
+coverImage: /covers/day05-cover-16-9.png
 ---
 
 # Day05-龙虾哥打工日记：OpenClaw 浏览器自动化 - AI 终于能上网冲浪了

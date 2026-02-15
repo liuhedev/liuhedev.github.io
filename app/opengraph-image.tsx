@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 // 生成 Open Graph 分享图片
 export const runtime = 'edge'
 
-export const alt = '刘贺同学 - 全栈工程师技术博客'
+export const alt = '刘贺同学 - AI超级个体实践者'
 export const size = {
   width: 1200,
   height: 630,
@@ -67,7 +67,7 @@ export default async function OGImage() {
             color: '#A1A1AA',
           }}
         >
-          全栈工程师 · AI 探索者
+          10年+ 全栈开发工程师 | 专注 AI 工程化实践与落地场景
         </div>
 
         {/* Bottom line */}
@@ -79,7 +79,7 @@ export default async function OGImage() {
             color: '#52525B',
           }}
         >
-          专注于全栈开发、系统设计和 AI 应用
+          一个人 + AI = AI超级个体
         </div>
       </div>
     ),

@@ -53,13 +53,13 @@ export default function Home() {
                 刘贺同学
               </h1>
               <p className="text-xl md:text-2xl text-secondary dark:text-secondary-dark">
-                全栈工程师 · AI 探索者
+                10年+ 全栈开发工程师 | 支付系统研发老兵 | 专注 AI 工程化实践与落地场景
               </p>
             </div>
 
             {/* Description */}
             <p className="max-w-2xl text-lg text-secondary dark:text-secondary-dark text-balance">
-              专注于全栈开发、系统设计和 AI 应用。分享技术实践、项目经验和开发思考。
+              一个人 + AI = AI超级个体。专注工程化落地与场景实践，持续输出可复用的实战内容。
             </p>
 
             {/* Social Links */}

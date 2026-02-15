@@ -20,10 +20,10 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL('https://liuhedev.github.io'),
   title: {
-    default: '刘贺同学 | 全栈工程师',
+    default: '刘贺同学 | AI超级个体实践者',
     template: '%s | 刘贺同学',
   },
-  description: '全栈工程师的技术博客，专注于全栈开发、系统设计和 AI 应用。分享技术实践、项目经验和开发思考。',
+  description: '专注 AI 工程化实践与落地场景。一个人 + AI = AI超级个体。',
   keywords: ['全栈开发', '前端', '后端', 'AI', '技术博客', '系统设计', '刘贺'],
   authors: [{ name: '刘贺', url: 'https://github.com/liuhedev' }],
   creator: '刘贺',
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'zh_CN',
     url: 'https://liuhedev.github.io',
-    title: '刘贺同学 | 全栈工程师',
-    description: '全栈工程师的技术博客，专注于全栈开发、系统设计和 AI 应用',
+    title: '刘贺同学 | AI超级个体实践者',
+    description: '专注 AI 工程化实践与落地场景',
     siteName: '刘贺同学技术博客',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '刘贺同学 | 全栈工程师',
-    description: '全栈工程师的技术博客，专注于全栈开发、系统设计和 AI 应用',
+    title: '刘贺同学 | AI超级个体实践者',
+    description: '专注 AI 工程化实践与落地场景',
   },
   icons: {
     icon: '/icon',

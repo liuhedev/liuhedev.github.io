@@ -34,4 +34,6 @@ menu:
 
 - 博客：[liuhedev.github.io](https://liuhedev.github.io)
 - 微信公众号：刘贺同学
+
+![微信公众号二维码](/wechat-qrcode.png)
 - [飞书知识库](https://my.feishu.cn/wiki/YjJ6wh9v9iLDc2kfvdMcoMsrn2g)

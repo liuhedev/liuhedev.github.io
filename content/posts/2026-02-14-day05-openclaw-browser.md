@@ -24,7 +24,7 @@ coverImage: /covers/day05-cover-16-9.png
 
 ## 三、两种浏览器模式
 
-![两种浏览器模式对比](/browser-modes.png)
+![两种浏览器模式对比](/images/day05/browser-modes.png)
 
 ### Managed 模式（托管浏览器）
 
@@ -58,11 +58,11 @@ OpenClaw 内置 playwright-core，会自动检测你本机的 Chromium 内核浏
 
 研究成果同步发了一篇小红书，数据还不错：
 
-![小红书-OpenClaw浏览器自动化实测](/xhs-openclaw-browser.jpg)
+![小红书-OpenClaw浏览器自动化实测](/images/day05/xhs-openclaw-browser.jpg)
 
 今天用三种方式都成功发了小红书笔记：
 
-![三种发帖方式对比](/xhs-methods.png)
+![三种发帖方式对比](/images/day05/xhs-methods.png)
 
 日常发帖推荐用 xiaohongshu-mcp，稳定且不依赖浏览器状态。托管浏览器适合需要操作复杂页面的场景。中继模式适合临时借用登录态。
 

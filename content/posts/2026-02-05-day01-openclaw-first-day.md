@@ -18,12 +18,12 @@ coverImage: /covers/day01-cover-16-9.png
 ### 1. 搭建OpenClaw并对接飞书
 搭建了OpenClaw并对接飞书机器人，每天晚上23点将今日的工作整理同步到GitHub上。
 
-![OpenClaw控制界面](/openclaw-dashboard.png)
+![OpenClaw控制界面](/images/day01/openclaw-dashboard.png)
 
 ### 2. 使用UI-UX Pro Max Skill重新设计博客
 使用UI-UX Pro Max Skill对GitHub博客网站进行了全面重新设计。新的设计采用Next.js + Tailwind技术栈，优化了用户体验和界面交互。
 
-![博客主页（黑暗模式）](/blog-homepage-dark.png)
+![博客主页（黑暗模式）](/images/day01/blog-homepage-dark.png)
 
 ### 3. 整理今天的工作总结
 将今天的工作整理成这篇文章，分享经验和解决方案。

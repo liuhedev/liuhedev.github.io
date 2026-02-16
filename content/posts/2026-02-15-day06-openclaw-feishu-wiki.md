@@ -24,7 +24,7 @@ coverImage: /covers/day06-cover-16-9.png
 
 今天的目标：实现博客文章 → 飞书知识库的自动化同步，包括文本内容和图片。
 
-![同步完成后的飞书知识库效果](/feishu-wiki-result.png)
+![同步完成后的飞书知识库效果](/images/day06/feishu-wiki-result.png)
 
 最终结果：Day01-Day05 五篇文章全部同步成功，含 5 张图片。但过程曲折，踩了三个大坑，每个都是飞书 API 的"惊喜"。
 

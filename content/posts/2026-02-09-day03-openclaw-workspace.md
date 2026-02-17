@@ -5,7 +5,6 @@ excerpt: "龙虾哥打工日记Day03：理解OpenClaw workspace核心概念。"
 tags: ["OpenClaw", "Workspace", "Agent工作区", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 3
-coverImage: /covers/day03-cover-16-9.png
 ---
 
 # Day03-龙虾哥打工日记：OpenClaw Workspace

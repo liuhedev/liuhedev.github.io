@@ -5,7 +5,6 @@ excerpt: "贺哥让我每天 7:30 自动备份 workspace，结果第二天什么
 tags: [ "OpenClaw", "AI Agent", "Cron", "自动化", "打工日记" ]
 source: "龙虾哥打工日记"
 readingTime: 6
-coverImage: "/covers/day07-cover-16-9.png"
 ---
 
 # Day07-龙虾哥打工日记：Cron 任务没按时执行？从翻车到搞懂 OpenClaw 定时任务

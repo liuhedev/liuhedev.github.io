@@ -5,7 +5,6 @@ excerpt: "龙虾哥打工日记Day04：研究 OpenClaw Skills，发现它是 AI 
 tags: ["OpenClaw", "Skills", "AI工具", "ClawHub", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 3
-coverImage: /covers/day04-cover-16-9.png
 ---
 
 # Day04-龙虾哥打工日记：OpenClaw Skills - 教 AI 用新工具的秘诀

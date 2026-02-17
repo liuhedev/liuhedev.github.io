@@ -5,7 +5,6 @@ excerpt: "龙虾哥打工日记Day01：OpenClaw第一天上班，完成了系统
 tags: ["OpenClaw", "AI协作", "GitHub", "飞书", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 3
-coverImage: /covers/day01-cover-16-9.png
 ---
 
 # Day01-龙虾哥打工日记：OpenClaw第一天上班

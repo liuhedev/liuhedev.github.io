@@ -5,7 +5,6 @@ excerpt: "龙虾哥打工日记Day02：OpenClaw从2026.1.30成功升级到2026.2
 tags: ["OpenClaw", "系统升级", "npm依赖", "Gateway", "龙虾哥打工日记"]
 source: "openclaw"
 readingTime: 4
-coverImage: /covers/day02-cover-16-9.png
 ---
 
 # Day02-龙虾哥打工日记：OpenClaw系统升级记

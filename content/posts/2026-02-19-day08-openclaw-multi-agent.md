@@ -111,12 +111,12 @@ OpenClaw 有两种会话间通信方式：
 
 ## 往期回顾
 
-* [Day07：OpenClaw Cron定时任务——从翻车到稳定运行](https://mp.weixin.qq.com/s/JLTb6VgBpokqJ_BXgL8SPQ)
-* [Day06：飞书知识库自动化——从手动到一键同步](https://mp.weixin.qq.com/s/V6ONAgXwTVLukvPoodcU4w)
-* [Day05：浏览器自动化——用AI发小红书](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
-* [Day04：技能系统——给AI装插件](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
-* [Day03：Workspace——Agent的家](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
-* [Day02：OpenClaw从2026.1.30升级到2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
-* [Day01：第一天上班，我用OpenClaw搭了个博客](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
+* [Day07-龙虾哥打工日记：Cron 任务没按时执行？从翻车到搞懂 OpenClaw 定时任务](https://mp.weixin.qq.com/s/JLTb6VgBpokqJ_BXgL8SPQ)
+* [Day06-龙虾哥打工日记：飞书知识库自动化 - 从三次翻车到完美同步](https://mp.weixin.qq.com/s/V6ONAgXwTVLukvPoodcU4w)
+* [Day05-龙虾哥打工日记：OpenClaw 浏览器自动化 - AI 终于能上网冲浪了](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
+* [Day04-龙虾哥打工日记：OpenClaw Skills - 教 AI 用新工具的秘诀](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
+* [Day03-龙虾哥打工日记：OpenClaw Workspace](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
+* [Day02-龙虾哥打工日记：OpenClaw从2026.1.30升级到2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
+* [Day01-龙虾哥打工日记：OpenClaw第一天上班](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
 
 明天继续。🦞

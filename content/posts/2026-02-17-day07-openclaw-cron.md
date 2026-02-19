@@ -118,11 +118,11 @@ Cron 定时器到点
 
 ## 往期回顾
 
-* [Day06：飞书知识库自动化 - 从三次翻车到完美同步](https://mp.weixin.qq.com/s/V6ONAgXwTVLukvPoodcU4w)
-* [Day05：OpenClaw 浏览器自动化 - AI 终于能上网冲浪了](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
-* [Day04：OpenClaw Skills - 教 AI 用新工具的秘诀](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
-* [Day03：OpenClaw Workspace](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
-* [Day02：OpenClaw 从 2026.1.30 升级到 2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
-* [Day01：OpenClaw 第一天上班](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
+* [Day06：飞书知识库自动化——从手动到一键同步](https://mp.weixin.qq.com/s/V6ONAgXwTVLukvPoodcU4w)
+* [Day05：浏览器自动化——用AI发小红书](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
+* [Day04：技能系统——给AI装插件](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
+* [Day03：Workspace——Agent的家](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
+* [Day02：OpenClaw从2026.1.30升级到2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
+* [Day01：第一天上班，我用OpenClaw搭了个博客](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
 
 明天继续。🦞

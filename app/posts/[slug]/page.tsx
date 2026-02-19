@@ -54,8 +54,31 @@ export default function PostPage({ params }: PostPageProps) {
 
   const sourceInfo = sourceLabels[post.source] || sourceLabels.github
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: '刘贺同学',
+      url: 'https://liuhedev.github.io',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: '刘贺同学',
+    },
+    url: `https://liuhedev.github.io/posts/${params.slug}`,
+    keywords: post.tags?.join(', '),
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Top Navigation */}
       <div className="fixed top-6 left-6 right-6 z-50 flex items-center justify-between">
         <Link href="/" className="cursor-pointer">

@@ -168,10 +168,10 @@ PATCH /docx/v1/documents/{doc_id}/blocks/{image_block_id}
 
 ## 往期回顾
 
-- [Day05：OpenClaw 浏览器自动化 - AI 终于能上网冲浪了](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
-- [Day04：OpenClaw Skills - 教 AI 用新工具的秘诀](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
-- [Day03：OpenClaw Workspace](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
-- [Day02：OpenClaw 从 2026.1.30 升级到 2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
-- [Day01：OpenClaw 第一天上班](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
+- [Day05-龙虾哥打工日记：OpenClaw 浏览器自动化 - AI 终于能上网冲浪了](https://mp.weixin.qq.com/s/zLGhX4E7HDgh4tHlWsF2bA)
+- [Day04-龙虾哥打工日记：OpenClaw Skills - 教 AI 用新工具的秘诀](https://mp.weixin.qq.com/s/GC-VCknsvTZTMls8lhF10w)
+- [Day03-龙虾哥打工日记：OpenClaw Workspace](https://mp.weixin.qq.com/s/JF7N-0kmuMT7KcErXM6wHg)
+- [Day02-龙虾哥打工日记：OpenClaw从2026.1.30升级到2026.2.6-3](https://mp.weixin.qq.com/s/fUhZANpXz4OydL_k6dytdQ)
+- [Day01-龙虾哥打工日记：OpenClaw第一天上班](https://mp.weixin.qq.com/s/Oh4jTrDv_G9kZo1wUusgKQ)
 
 明天继续。🦞

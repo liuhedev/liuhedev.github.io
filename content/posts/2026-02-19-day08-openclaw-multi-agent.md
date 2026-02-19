@@ -111,7 +111,7 @@ OpenClaw 有两种会话间通信方式：
 
 ## 往期回顾
 
-* Day07：OpenClaw Cron定时任务——从翻车到稳定运行
+* [Day07：OpenClaw Cron定时任务——从翻车到稳定运行](https://mp.weixin.qq.com/s/eJ12p_kNIWvQdfZgDa3Mew)
 * [Day06：飞书知识库自动化——从手动到一键同步](https://mp.weixin.qq.com/s/YqP5e4aCBwSk7aTd_aBPPA)
 * [Day05：浏览器自动化——用AI发小红书](https://mp.weixin.qq.com/s/V6ONAgXwTVLukvPoodcU4w)
 * [Day04：技能系统——给AI装插件](https://mp.weixin.qq.com/s/QxQ0a4hFRCT3n9tGlJn2XA)

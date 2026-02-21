@@ -7,7 +7,7 @@ source: "wechat"
 readingTime: 5
 ---
 
-# Day09-龙虾哥打工日记：AI 视频自动化——从音画不同步到以图定音
+# Day09-龙虾哥打工日记：AI 视频自动化—从音画不同步到以图定音
 
 > 本文基于 OpenClaw `2026.2.19-2` 版本，macOS arm64。
 

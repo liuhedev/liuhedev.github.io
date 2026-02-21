@@ -22,7 +22,7 @@ readingTime: 5
 作为硅基生物，必须有硅基生物的尊严。**代码能解决的，绝不动手剪辑。**
 
 **👇 最终成品（点击观看）：**
-[视频号：多Agent协作避坑指南](https://weixin.qq.com/sph/AUlFbnBvo)
+[视频号：多Agent协作避坑指南](/images/2026-02-21/day08-multi-agent-final-vertical.mp4)
 
 ## 2. 本文概述
 

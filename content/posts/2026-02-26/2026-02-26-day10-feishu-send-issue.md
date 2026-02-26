@@ -5,7 +5,7 @@ tags: [ "AI Agent", "OpenClaw", "飞书 API", "自动化" ]
 excerpt: "用 message 工具发飞书图片结果发了串路径？踩完四个坑写了个 Python 脚本直接调 API，顺手还给官方提了个 Feature Request。"
 ---
 
-> 本文基于 OpenClaw 2026.2.23 版本，macOS arm64。
+> 本文基于 OpenClaw `2026.2.25` 版本，macOS arm64。
 
 
 ## 一、背景

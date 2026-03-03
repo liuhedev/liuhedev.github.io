@@ -45,6 +45,13 @@ export const metadata: Metadata = {
     icon: '/icon',
     apple: '/apple-icon',
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: {
+      ...(process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION ? { 'baidu-site-verification': process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION } : {}),
+      ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : {}),
+    },
+  },
 }
 
 export default function RootLayout({

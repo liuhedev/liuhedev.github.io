@@ -33,6 +33,7 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: _yrP4ktxdDhlnovPc6l-ff6Udsbcqi7Dp_wVfQagcRc
+          NEXT_PUBLIC_BING_SITE_VERIFICATION: 2EFBCF643B09D45994885C3B0B999309
         run: npm run build
 
       - name: Upload artifact

@@ -31,6 +31,8 @@ jobs:
         run: npm ci
 
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: _yrP4ktxdDhlnovPc6l-ff6Udsbcqi7Dp_wVfQagcRc
         run: npm run build
 
       - name: Upload artifact

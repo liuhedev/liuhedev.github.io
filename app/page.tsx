@@ -183,7 +183,7 @@ function getRelativeTime(dateString: string): string {
   if (diffInDays === 0) return '今天'
   if (diffInDays === 1) return '1 天前'
   if (diffInDays < 7) return `${diffInDays} 天前`
-  if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} 周前'`
+  if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} 周前`
   if (diffInDays < 365) return `${Math.floor(diffInDays / 30)} 个月前`
   return `${Math.floor(diffInDays / 365)} 年前`
 }

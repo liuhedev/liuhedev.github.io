@@ -2,6 +2,7 @@
 title: OpenClaw 模型选择指导手册（国内外主流模型）
 slug: 2026-03-05-model-comparison
 summary: 深度调研 2026 年 3 月主流 AI 模型，为 OpenClaw 子任务推荐性价比最高的主模型与路由方案。
+date: "2026-03-05"
 ---
 
 ## 1. 背景：被高昂的模型 API 账单“打醒”

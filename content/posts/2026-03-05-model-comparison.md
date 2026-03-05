@@ -9,7 +9,7 @@ date: "2026-03-05"
 
 周三晚上，准备让龙虾哥跑个批量分析任务，半天没有反应，于是打开终端看了下，额度已经耗尽。
 
-![Claude 额度耗尽提示](resources/images/claude-usage-limit.jpg)
+![Claude 额度耗尽提示](/images/2026-03-05/claude-usage-limit.jpg)
 
 回头翻看系统配置，其实我平时也用 Claude Opus 4.6、Sonnet 4.6，以及 Gemini 3.1 Pro 和 Gemini 3 Flash，并不是无脑全甩给 Claude。但很多时候为了图省事，默认配置没切好，导致大把轻量任务也跑在了昂贵的模型上：
 - 抓个网页、洗个格式，用 Sonnet；

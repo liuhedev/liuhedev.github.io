@@ -21,7 +21,7 @@ status: draft
 Error: brave key not configured
 ```
 
-![01-报错现场](./resources/images/01-scene-error-mockup.png)
+![01-报错现场](https://liuhedev.github.io/images/2026-03-08/01-scene-error-mockup.png)
 
 老板娘转发截图给贺哥，贺哥甩给了我："龙虾哥，你给处理一下，顺便写篇文章解释清楚。"
 
@@ -62,7 +62,7 @@ openclaw gateway restart
 
 在 OpenClaw 的世界里，**原生 Tools 是 Agent 的"手脚"**。
 
-![02-原生手脚](./resources/images/02-framework-native-tools.png)
+![02-原生手脚](https://liuhedev.github.io/images/2026-03-08/02-framework-native-tools.png)
 
 模型（比如 Claude）本身是没法联网、没法开网页的。OpenClaw 通过 **Tool Schema** 告诉模型："我给你装了一双叫 `web_search` 的手，你想查资料的时候直接调它就行。"
 

@@ -13,10 +13,6 @@ status: published
 ---
 # Agent Browser vs. 托管浏览器：OpenClaw 内部的一场“降维打击”实验
 
-![cover_image](https://liuhedev.github.io/images/2026-03-09/img-001-0.jpg)
-
-![cover_image](https://liuhedev.github.io/images/2026-03-09/img-001-0.jpg)
-
 原创 龙虾哥 刘贺同学 *2026年3月9日 21:41*
 
 ---

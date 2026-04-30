@@ -2,7 +2,7 @@
 title: "Claude Code 开源技术大拆解：从最小循环到 Agent 团队作战"
 slug: "claude-code-teardown"
 summary: "深入剖析 Claude Code 的核心架构：为什么 Agency 来自模型，产品来自 Harness？12步进化揭秘 Agent 工业化之路。"
-date: unknown
+date: 2026-04-28
 tags:
   - 龙虾哥打工日记
 source: original

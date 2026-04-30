@@ -1,30 +1,38 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Space_Grotesk } from 'next/font/google'
+import { Fraunces, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
-const dmSans = DM_Sans({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-dm-sans',
+  style: ['normal', 'italic'],
+  variable: '--font-fraunces',
+  display: 'swap',
+  axes: ['SOFT', 'opsz'],
+})
+
+const plex = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-plex',
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const mono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-space-grotesk',
+  weight: ['400', '500', '600'],
+  variable: '--font-mono',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://liuhedev.github.io'),
   title: {
-    default: '刘贺同学 | AI超级个体实践者',
-    template: '%s | 刘贺同学',
+    default: '刘贺同学 · Notebook of Practice',
+    template: '%s · 刘贺同学',
   },
-  description: 'OpenClaw 实战经验分享 | AI Agent 工程化落地 | 专注 AI 工程化实践与落地场景。一个人 + AI = AI超级个体。',
-  keywords: ['OpenClaw', 'AI Agent', 'AI编程', 'AI超级个体', '龙虾哥打工日记', '全栈开发', '技术博客', '刘贺同学'],
+  description: 'AI 工程化实践、Agent 落地踩坑、Claude Code / OpenClaw / Hermes 拆解笔记。',
+  keywords: ['OpenClaw', 'Hermes', 'Claude Code', 'AI Agent', 'AI编程', '龙虾哥打工日记', '刘贺同学'],
   authors: [{ name: '刘贺', url: 'https://github.com/liuhedev' }],
   creator: '刘贺',
   publisher: '刘贺同学',
@@ -32,14 +40,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'zh_CN',
     url: 'https://liuhedev.github.io',
-    title: '刘贺同学 | AI超级个体实践者',
-    description: 'OpenClaw 实战经验分享 | AI Agent 工程化落地 | 专注 AI 工程化实践与落地场景',
+    title: '刘贺同学 · Notebook of Practice',
+    description: 'AI 工程化实践、Agent 落地踩坑笔记',
     siteName: '刘贺同学技术博客',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '刘贺同学 | AI超级个体实践者',
-    description: 'OpenClaw 实战经验分享 | AI Agent 工程化落地',
+    title: '刘贺同学 · Notebook of Practice',
+    description: 'AI 工程化实践、Agent 落地踩坑笔记',
   },
   icons: {
     icon: '/icon',
@@ -62,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${fraunces.variable} ${plex.variable} ${mono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

@@ -1,172 +1,100 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Footer } from '@/components/footer'
-import { Github, Mail, ChevronDown } from 'lucide-react'
-import { getAllPosts } from '@/lib/posts'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { IndexBoard } from '@/components/index-board'
+import { getAllPosts } from '@/lib/posts'
 
 export default function Home() {
   const posts = getAllPosts()
-
-  const sourceLabels: Record<string, { text: string; emoji: string; color: string }> = {
-    feishu: { text: '飞书', emoji: '☁️', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
-    wechat: { text: '公众号', emoji: '💬', color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' },
-    github: { text: 'GitHub', emoji: '🐙', color: 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900' },
-    openclaw: { text: 'OpenClaw', emoji: '🤖', color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
-  }
+  const total = posts.length
+  const issueNo = String(total).padStart(2, '0')
+  const lastUpdate = posts[0]?.date
 
   return (
     <>
       <main className="min-h-screen">
-        {/* Top Navigation */}
-        <div className="fixed top-6 left-6 right-6 z-50 flex items-center justify-between">
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src="/avatar.jpg"
-              alt="刘贺"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-          </Link>
-          <ThemeToggle />
-        </div>
-
-        {/* Hero Section */}
-        <section className="container-custom py-24 md:py-32">
-          <div className="flex flex-col items-center text-center gap-8 animate-fade-in">
-            {/* Avatar */}
-            <div className="relative">
+        {/* Masthead */}
+        <header className="container-page pt-6 pb-4">
+          <div className="flex items-center justify-between gap-4">
+            <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/avatar.jpg"
                 alt="刘贺"
-                width={120}
-                height={120}
-                className="rounded-full ring-4 ring-zinc-200 dark:ring-zinc-800"
+                width={32}
+                height={32}
+                className="rounded-full ring-1 ring-rule/40 group-hover:ring-accent transition"
                 priority
               />
-            </div>
-
-            {/* Title */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-balance">
-                刘贺同学
-              </h1>
-              <p className="text-xl md:text-2xl text-secondary dark:text-secondary-dark">
-                10年+ 全栈开发工程师 | 支付系统研发老兵 | 专注 AI 工程化实践与落地场景
-              </p>
-            </div>
-
-            {/* Description */}
-            <p className="max-w-2xl text-lg text-secondary dark:text-secondary-dark text-balance">
-              一个人 + AI = AI超级个体。专注工程化落地与场景实践，持续输出可复用的实战内容。
-            </p>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
+              <div className="flex items-baseline gap-2">
+                <span className="font-display font-semibold tracking-tight text-base">
+                  刘贺同学
+                </span>
+                <span className="meta hidden sm:inline">Notebook of Practice</span>
+              </div>
+            </Link>
+            <nav className="flex items-center gap-2">
               <a
+                className="ghost-btn hidden sm:inline-flex"
                 href="https://github.com/liuhedev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary px-6 py-3 cursor-pointer"
               >
-                <Github className="h-5 w-5 mr-2" />
                 GitHub
               </a>
               <a
-                href="mailto:liuhe@example.com"
-                className="btn btn-ghost px-6 py-3 cursor-pointer"
+                className="ghost-btn hidden sm:inline-flex"
+                href="https://juejin.cn/user/3220876915519960"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Mail className="h-5 w-5 mr-2" />
-                邮箱
+                掘金
               </a>
+              <ThemeToggle />
+            </nav>
+          </div>
+          <hr className="rule mt-5 draw-rule" />
+        </header>
+
+        {/* Editorial banner */}
+        <section className="container-page pt-10 pb-10 lg:pt-14 lg:pb-12">
+          <div className="grid grid-cols-12 gap-6 items-end">
+            <div className="col-span-12 lg:col-span-8">
+              <div className="meta mb-3">Issue №{issueNo} · Spring 2026 · Engineering Log</div>
+              <h1 className="display text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium text-balance">
+                A field notebook for{' '}
+                <span className="display-italic text-accent">AI agents</span>
+                {' '}in production.
+              </h1>
+              <p className="mt-6 max-w-2xl text-base sm:text-lg text-ink-soft leading-relaxed text-pretty">
+                十年全栈，支付系统老兵。这里是我跑 Claude Code、OpenClaw、Hermes 的实测笔记——
+                Agent 怎么搭、Skill 怎么沉淀、踩了哪些坑、把哪些工作流榨成模板。
+                共 <span className="text-accent font-medium tabular-nums">{total}</span> 篇，
+                持续在写。
+              </p>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="mt-16 animate-bounce">
-              <ChevronDown className="h-6 w-6 text-secondary dark:text-secondary-dark" />
+            <div className="col-span-12 lg:col-span-4 lg:pl-6 lg:border-l lg:border-rule-soft">
+              <dl className="grid grid-cols-3 lg:grid-cols-1 gap-4 lg:gap-3">
+                <Stat label="Entries" value={String(total).padStart(2, '0')} />
+                <Stat
+                  label="Latest"
+                  value={
+                    lastUpdate
+                      ? new Date(lastUpdate).toISOString().slice(0, 10)
+                      : '—'
+                  }
+                />
+                <Stat label="Languages" value="ZH · EN" />
+              </dl>
             </div>
           </div>
         </section>
 
-        {/* Content Timeline Section */}
-        <section className="container-custom py-16">
-          <div className="flex flex-col items-center gap-8">
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-center">
-              最新内容
-            </h2>
+        <hr className="container-page rule-soft" />
 
-            {/* Filter Tags */}
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {['全部', '技术文章', '开源项目', '思考随笔'].map((tag) => (
-                <button
-                  key={tag}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
-                    tag === '全部'
-                      ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900'
-                      : 'bg-transparent border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
-
-            {/* Content Cards */}
-            <div className="w-full max-w-4xl space-y-6">
-              {posts.map((post) => {
-                const sourceInfo = sourceLabels[post.source] || sourceLabels.github
-                const relativeTime = getRelativeTime(post.date)
-
-                return (
-                  <Link key={post.slug} href={`/posts/${post.slug}`}>
-                    <article className="card cursor-pointer">
-                      <div className="space-y-4">
-                        <div className="flex items-start justify-between gap-4">
-                          <h3 className="text-xl font-display font-semibold">
-                            {post.title}
-                          </h3>
-                          <span className={`shrink-0 text-xs px-2 py-1 rounded-full ${sourceInfo.color}`}>
-                            {sourceInfo.emoji} {sourceInfo.text}
-                          </span>
-                        </div>
-
-                        <p className="text-secondary dark:text-secondary-dark">
-                          {post.excerpt}
-                        </p>
-
-                        {post.tags.length > 0 && (
-                          <div className="flex flex-wrap items-center gap-2">
-                            {post.tags.map((tag) => (
-                              <span
-                                key={tag}
-                                className="text-xs px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-
-                        <div className="flex items-center gap-4 text-sm text-secondary dark:text-secondary-dark">
-                          <span>📅 {relativeTime}</span>
-                          <span>⏱️ {post.readingTime} 分钟阅读</span>
-                        </div>
-                      </div>
-                    </article>
-                  </Link>
-                )
-              })}
-            </div>
-
-            {/* Load More - 暂时隐藏 */}
-            {posts.length === 0 && (
-              <div className="text-center text-secondary dark:text-secondary-dark">
-                <p>暂无文章</p>
-              </div>
-            )}
-          </div>
-        </section>
+        {/* Index board (filterable) */}
+        <IndexBoard posts={posts} />
       </main>
 
       <Footer />
@@ -174,16 +102,13 @@ export default function Home() {
   )
 }
 
-function getRelativeTime(dateString: string): string {
-  const date = new Date(dateString)
-  const now = new Date()
-  const diffInMs = now.getTime() - date.getTime()
-  const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
-
-  if (diffInDays === 0) return '今天'
-  if (diffInDays === 1) return '1 天前'
-  if (diffInDays < 7) return `${diffInDays} 天前`
-  if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} 周前`
-  if (diffInDays < 365) return `${Math.floor(diffInDays / 30)} 个月前`
-  return `${Math.floor(diffInDays / 365)} 年前`
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex flex-col">
+      <dt className="meta">{label}</dt>
+      <dd className="font-display text-2xl lg:text-3xl mt-1 tabular-nums tracking-tight">
+        {value}
+      </dd>
+    </div>
+  )
 }

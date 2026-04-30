@@ -2,113 +2,261 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Editorial Index — "Notebook of Practice"
+  Concept: a printed engineering journal. Warm cream paper, ink black,
+  burnt sienna accent. Fraunces display, IBM Plex Sans body, JetBrains Mono
+  for dates and meta. Hairline rules and generous margins; no rounded cards.
+*/
+
 @layer base {
   :root {
-    --background: 250 250 250; /* zinc-50 */
-    --foreground: 9 9 11; /* zinc-950 */
-    --muted: 244 244 245; /* zinc-100 */
-    --muted-foreground: 113 113 122; /* zinc-500 */
-    --border: 228 228 231; /* zinc-200 */
+    --paper: 246 242 232;        /* #F6F2E8 warm cream */
+    --paper-deep: 240 233 218;   /* #F0E9DA card */
+    --ink: 20 19 18;             /* #141312 deep ink */
+    --ink-soft: 60 56 48;        /* body */
+    --muted: 115 109 99;         /* #736D63 warm gray */
+    --rule: 26 23 18;            /* hairlines on cream */
+    --accent: 181 64 13;         /* #B5400D burnt sienna */
+    --accent-soft: 237 207 178;  /* terracotta tint */
+    --highlight: 249 220 130;    /* highlighter yellow */
   }
 
   .dark {
-    --background: 9 9 11; /* zinc-950 */
-    --foreground: 250 250 250; /* zinc-50 */
-    --muted: 39 39 42; /* zinc-800 */
-    --muted-foreground: 161 161 170; /* zinc-400 */
-    --border: 39 39 42; /* zinc-800 */
+    --paper: 17 16 14;           /* #11100E ink black */
+    --paper-deep: 23 21 18;
+    --ink: 236 230 218;          /* #ECE6DA warm cream */
+    --ink-soft: 198 192 178;
+    --muted: 139 132 118;
+    --rule: 236 230 218;
+    --accent: 234 105 70;        /* #EA6946 brighter sienna for dark */
+    --accent-soft: 60 30 18;
+    --highlight: 168 117 32;
   }
 
   body {
-    @apply bg-zinc-50 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-50 font-sans;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    background-color: rgb(var(--paper));
+    color: rgb(var(--ink));
+    font-family: var(--font-plex), "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    font-feature-settings: 'ss01' 1, 'ss02' 1, 'cv05' 1, 'cv11' 1;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(181, 64, 13, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 100%, rgba(20, 19, 18, 0.025) 0%, transparent 50%);
+    background-attachment: fixed;
   }
 
-  /* 优化字体渲染 */
+  .dark body {
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(234, 105, 70, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 100%, rgba(236, 230, 218, 0.02) 0%, transparent 50%);
+  }
+
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  /* 尊重用户动画偏好 */
+  ::selection {
+    background-color: rgb(var(--accent) / 0.85);
+    color: rgb(var(--paper));
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ink) / 0.18);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--accent) / 0.6);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
   }
-
-  /* 改善焦点可见性 */
-  *:focus-visible {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-zinc-50 dark:ring-offset-zinc-950;
-  }
-
-  /* 滚动条样式 */
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-300 dark:bg-zinc-700 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-zinc-400 dark:bg-zinc-600;
-  }
 }
 
 @layer components {
-  /* 卡片基础样式 */
-  .card {
-    @apply bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6;
-    @apply transition-all duration-200 ease-in-out;
+  .container-page {
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
   }
 
-  .card:hover {
-    @apply shadow-lg border-blue-500 dark:border-blue-400;
-    transform: translateY(-4px);
+  .rule {
+    border: 0;
+    height: 1px;
+    background-color: rgb(var(--rule));
+    margin: 0;
+  }
+  .rule-soft {
+    border: 0;
+    height: 1px;
+    background-color: rgb(var(--rule) / 0.18);
+    margin: 0;
   }
 
-  /* 浮动导航栏 */
-  .floating-nav {
-    @apply fixed top-4 left-4 right-4 z-50;
-    @apply bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg;
-    @apply border border-zinc-200 dark:border-zinc-800 rounded-2xl;
+  .meta {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgb(var(--muted));
   }
 
-  /* 容器 */
+  .display {
+    font-family: var(--font-fraunces), Georgia, serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+
+  .display-italic {
+    font-family: var(--font-fraunces), Georgia, serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+  }
+
+  .ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgb(var(--rule));
+    background: transparent;
+    color: rgb(var(--ink));
+    font-family: var(--font-mono), monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+    cursor: pointer;
+  }
+  .ghost-btn:hover {
+    background: rgb(var(--ink));
+    color: rgb(var(--paper));
+  }
+  .ghost-btn[aria-pressed="true"],
+  .ghost-btn.is-active {
+    background: rgb(var(--accent));
+    color: rgb(var(--paper));
+    border-color: rgb(var(--accent));
+  }
+
+  /* ── Backwards-compat shims for legacy pages (post detail, not-found, theme-toggle) ── */
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2rem);
   }
-
-  /* 按钮基础样式 */
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg font-medium;
-    @apply transition-colors duration-200 ease-in-out;
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500;
-    @apply disabled:pointer-events-none disabled:opacity-50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
   }
-
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
-    @apply dark:bg-blue-500 dark:hover:bg-blue-600;
+    background: rgb(var(--accent));
+    color: rgb(var(--paper));
   }
-
+  .btn-primary:hover {
+    background: rgb(var(--ink));
+  }
   .btn-ghost {
-    @apply bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800;
+    background: transparent;
+    color: rgb(var(--ink));
+  }
+  .btn-ghost:hover {
+    background: rgb(var(--ink) / 0.06);
+    color: rgb(var(--accent));
+  }
+  /* Map old "secondary" tokens to muted */
+  .text-secondary {
+    color: rgb(var(--muted));
+  }
+  .dark .text-secondary-dark,
+  .dark\:text-secondary-dark {
+    color: rgb(var(--muted));
+  }
+  .hover\:text-blue-600:hover,
+  .dark\:hover\:text-blue-400:hover {
+    color: rgb(var(--accent));
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .text-accent { color: rgb(var(--accent)); }
+  .text-muted { color: rgb(var(--muted)); }
+  .text-ink-soft { color: rgb(var(--ink-soft)); }
+  .bg-accent { background-color: rgb(var(--accent)); }
+  .bg-paper-deep { background-color: rgb(var(--paper-deep)); }
+  .border-rule { border-color: rgb(var(--rule)); }
+  .border-rule-soft { border-color: rgb(var(--rule) / 0.18); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(6px);
+    animation: reveal 480ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .draw-rule {
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: drawRule 700ms cubic-bezier(0.6, 0, 0.2, 1) forwards;
+  }
+  @keyframes drawRule {
+    to { transform: scaleX(1); }
+  }
+
+  .row-marker {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: rgb(var(--ink) / 0.4);
+    transition: transform 200ms ease, background-color 200ms ease;
+  }
+  .row:hover .row-marker,
+  .row:focus-visible-within .row-marker {
+    background-color: rgb(var(--accent));
+    transform: scale(1.6);
+  }
+  .row .row-arrow {
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+  .row:hover .row-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .row:hover .row-title {
+    color: rgb(var(--accent));
   }
 }

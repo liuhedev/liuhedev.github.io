@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 /*
-  Editorial Index — "Notebook of Practice"
-  Concept: a printed engineering journal. Warm cream paper, ink black,
-  burnt sienna accent. Fraunces display, IBM Plex Sans body, JetBrains Mono
-  for dates and meta. Hairline rules and generous margins; no rounded cards.
+  Editorial system shared by the article index and reading pages.
+  Warm paper, ink text, orange accent, hairline rules and generous margins.
 */
 
 @layer base {
@@ -154,6 +152,125 @@
     background: rgb(var(--accent));
     color: rgb(var(--paper));
     border-color: rgb(var(--accent));
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    border-bottom: 1px solid rgb(var(--rule) / 0.18);
+    background: rgb(var(--paper) / 0.92);
+    backdrop-filter: blur(14px);
+  }
+
+  .header-link {
+    align-items: center;
+    min-height: 2.5rem;
+    padding-inline: 0.75rem;
+    color: rgb(var(--ink-soft));
+    font-size: 0.875rem;
+    transition: color 160ms ease;
+  }
+  .header-link:hover { color: rgb(var(--accent)); }
+
+  .search-field {
+    display: flex;
+    width: min(100%, 18rem);
+    align-items: center;
+    gap: 0.625rem;
+    border-bottom: 1px solid rgb(var(--rule) / 0.35);
+    padding-block: 0.625rem;
+    color: rgb(var(--muted));
+  }
+  .search-field:focus-within { border-color: rgb(var(--accent)); color: rgb(var(--accent)); }
+  .search-field input { width: 100%; background: transparent; color: rgb(var(--ink)); outline: none; }
+  .search-field input::placeholder { color: rgb(var(--muted)); }
+
+  .article-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: 1.75rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--muted));
+    font-size: 0.875rem;
+    transition: color 160ms ease;
+  }
+  .back-link:hover { color: rgb(var(--accent)); }
+
+  .article-header {
+    margin-block: 2.5rem 3rem;
+    border-bottom: 1px solid rgb(var(--rule) / 0.18);
+    padding-bottom: 3rem;
+  }
+
+  .article-tag {
+    border: 1px solid rgb(var(--rule) / 0.22);
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    color: rgb(var(--ink-soft));
+  }
+
+  .article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 760px) 220px;
+    justify-content: center;
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+  .article-content { min-width: 0; }
+  .toc {
+    position: sticky;
+    top: 7rem;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+    align-self: start;
+  }
+
+  .article-prose {
+    --tw-prose-body: rgb(var(--ink-soft));
+    --tw-prose-headings: rgb(var(--ink));
+    --tw-prose-links: rgb(var(--accent));
+    --tw-prose-bold: rgb(var(--ink));
+    --tw-prose-counters: rgb(var(--muted));
+    --tw-prose-bullets: rgb(var(--accent));
+    --tw-prose-quotes: rgb(var(--ink-soft));
+    --tw-prose-quote-borders: rgb(var(--accent));
+    --tw-prose-hr: rgb(var(--rule) / 0.18);
+    --tw-prose-th-borders: rgb(var(--rule) / 0.35);
+    --tw-prose-td-borders: rgb(var(--rule) / 0.18);
+    font-size: 1.0625rem;
+    line-height: 1.9;
+  }
+  .article-prose :where(h2, h3, h4) { scroll-margin-top: 7rem; letter-spacing: -0.02em; }
+  .article-prose :where(h2) { margin-top: 3.25rem; border-top: 1px solid rgb(var(--rule) / 0.18); padding-top: 2rem; font-size: 1.75rem; }
+  .article-prose :where(h3) { margin-top: 2.25rem; font-size: 1.35rem; }
+  .article-prose :where(p, li) { text-wrap: pretty; }
+  .article-prose :where(a) { text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+  .article-prose :where(blockquote) { background: rgb(var(--paper-deep)); padding: 1rem 1.25rem; font-style: normal; }
+  .article-prose :where(code):not(:where(pre code)) { border: 1px solid rgb(var(--rule) / 0.15); border-radius: 0.2rem; background: rgb(var(--paper-deep)); padding: 0.12rem 0.35rem; color: rgb(var(--ink)); font-size: 0.88em; }
+  .article-prose :where(pre) { overflow-x: auto; border: 1px solid rgb(255 255 255 / 0.08); border-radius: 0.35rem; padding: 1.1rem 1.25rem; }
+  .article-prose :where(table) { display: block; width: max-content; max-width: 100%; overflow-x: auto; font-size: 0.9rem; }
+  .article-prose :where(th) { background: rgb(var(--paper-deep)); }
+  .article-prose :where(img) { height: auto; max-width: 100%; border: 1px solid rgb(var(--rule) / 0.12); }
+  .article-prose :where(hr) { margin-block: 3rem; }
+
+  @media (max-width: 1023px) {
+    .article-layout { display: block; }
+    .toc { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    .article-row { padding-block: 1.4rem; }
+    .article-header { margin-top: 2rem; padding-bottom: 2rem; }
+    .article-prose { font-size: 1rem; line-height: 1.8; }
+    .article-prose :where(h2) { font-size: 1.5rem; }
+    .article-prose :where(pre) { margin-inline: -0.25rem; padding: 1rem; }
   }
 
   /* ── Backwards-compat shims for legacy pages (post detail, not-found, theme-toggle) ── */

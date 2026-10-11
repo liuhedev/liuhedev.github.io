@@ -23,4 +23,5 @@ export interface PostMetadata {
   source: string
   sourceUrl?: string
   coverImage?: string
+  listed: boolean
 }

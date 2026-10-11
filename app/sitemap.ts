@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/posts'
+import { getListedPosts } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts()
+  const posts = getListedPosts()
   const postEntries = posts.map((post) => ({
     url: `https://liuhedev.github.io/posts/${post.slug}`,
     lastModified: new Date(post.date),

@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { Footer } from '@/components/footer'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { IndexBoard } from '@/components/index-board'
-import { getAllPosts } from '@/lib/posts'
+import { getListedPosts } from '@/lib/posts'
 
 export default function Home() {
-  const posts = getAllPosts()
+  const posts = getListedPosts()
   const total = posts.length
   const issueNo = String(total).padStart(2, '0')
   const lastUpdate = posts[0]?.date

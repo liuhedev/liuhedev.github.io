@@ -6,11 +6,25 @@ import matter from 'gray-matter'
 
 const outputDirectory = path.join(process.cwd(), 'out')
 const postsDirectory = path.join(process.cwd(), 'content', 'posts')
+const publicImagesDirectory = path.join(process.cwd(), 'public', 'images')
 const index = JSON.parse(fs.readFileSync(path.join(outputDirectory, 'articles.json'), 'utf8'))
 const duplicateSlug = '2026-03-09-2026-03-09-browser-automation-experiment'
 const canonicalSlug = '2026-03-09-browser-automation-experiment'
 const archivedSlug = '2026-04-04-claude-restricts-openclaw'
 const placeholderTitle = /^(untitled|todo|tbd|待定|无标题|null|undefined)$/i
+
+assert(!fs.existsSync(path.join(process.cwd(), 'images')), 'site images belong under public/images')
+assert(
+  !fs.existsSync(path.join(process.cwd(), 'assets', 'images', 'articles', '2026-03-08')),
+  'published images must not be duplicated under assets',
+)
+for (const fileName of [
+  '01-scene-error-mockup.png',
+  '02-framework-native-tools-raw.png',
+  '02-framework-native-tools.png',
+]) {
+  assert(fs.existsSync(path.join(publicImagesDirectory, '2026-03-08', fileName)))
+}
 
 assert.equal(index.version, 1)
 const sourceFiles = fs.readdirSync(postsDirectory).filter((fileName) => fileName.endsWith('.md'))

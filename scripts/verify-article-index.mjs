@@ -144,6 +144,7 @@ assert(!sitemap.includes(`/posts/${duplicateSlug}`))
 assert(!sitemap.includes(`/posts/${archivedSlug}`))
 
 const homePage = fs.readFileSync(path.join(outputDirectory, 'index.html'), 'utf8')
+const footerSource = fs.readFileSync(path.join(process.cwd(), 'components', 'footer.tsx'), 'utf8')
 assert(homePage.includes('>44 篇</dd>'))
 assert.equal(
   [...homePage.matchAll(/href="\/posts\//g)].length,
@@ -152,6 +153,14 @@ assert.equal(
 )
 assert.match(homePage, /查看更多（已显示 .*10.* \/ .*44.*）/)
 assert(!homePage.includes('文章由 Markdown 驱动'))
+assert(!homePage.includes('文章会同步发布到掘金'))
+assert(!homePage.includes('>掘金<'))
+assert(!homePage.includes('>知乎<'))
+assert(!homePage.includes('Colophon'))
+assert(!homePage.includes('Built with Next.js'))
+assert(footerSource.includes('https://my.feishu.cn/wiki/YjJ6wh9v9iLDc2kfvdMcoMsrn2g'))
+assert(footerSource.includes('/contacts/wechat-qrcode.png'))
+assert(fs.existsSync(path.join(process.cwd(), 'public', 'contacts', 'wechat-qrcode.png')))
 assert(!homePage.includes('href="/icon"'))
 assert(!homePage.includes('href="/apple-icon"'))
 

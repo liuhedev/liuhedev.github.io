@@ -1,31 +1,12 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-
-interface TocItem {
-  id: string
-  text: string
-  level: number
-}
+import { extractMarkdownHeadings } from '@/lib/markdown-headings'
 
 export function TableOfContents({ content }: { content: string }) {
   const [activeId, setActiveId] = useState('')
   
-  // 从 markdown 提取 headings
-  const headings = useMemo(() => content
-    .split('\n')
-    .filter(line => /^#{2,4}\s/.test(line))
-    .map(line => {
-      const match = line.match(/^(#{2,4})\s+(.+)$/)
-      if (!match) return null
-      const text = match[2].replace(/[`*_~]/g, '')
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\u4e00-\u9fff]+/g, '-')
-        .replace(/^-|-$/g, '')
-      return { id, text, level: match[1].length }
-    })
-    .filter(Boolean) as TocItem[], [content])
+  const headings = useMemo(() => extractMarkdownHeadings(content), [content])
 
   useEffect(() => {
     const observer = new IntersectionObserver(

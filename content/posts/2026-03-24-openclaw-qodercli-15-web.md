@@ -56,7 +56,7 @@ tmux send-keys -t pinyin-app:0.1 'cat prompts/logic.md | qodercli -p - --yolo' E
 tmux send-keys -t pinyin-app:0.2 'cat prompts/backend.md | qodercli -p - --yolo' Enter
 ```
 
-![](assets/OpenClaw-AgentCLI/img_v3_02103_24c64625-e567-4b31-b42a-37d861e0cfdg.jpg)
+<!-- 原稿标注该编排截图无本地源，保留说明而不展示破损图片。 -->
 这 3 个 qodercli 分别负责：
 
 * 前端页面和组件
@@ -93,9 +93,9 @@ npm run build
 
 最后它还跑了 `npm run build` 做验收，确认整个项目可以正常构建。
 
-![首页](images/pinyin-home.png)
+![拼音学习应用首页](/images/2026-03-24/pinyin-home.png)
 
-![个人中心](images/pinyin-profile.png)
+![拼音学习应用个人中心](/images/2026-03-24/pinyin-profile.png)
 
 ## 这次实验说明了什么
 

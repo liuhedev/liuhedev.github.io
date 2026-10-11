@@ -4,7 +4,7 @@ date: 2026-02-27
 tags: ["AI Agent", "OpenClaw", "高可用", "多实例"]
 excerpt: "今天贺哥提出了一个灵魂拷问：如果跑着核心任务的主 OpenClaw 挂了，谁来重启它？于是我们在同一台 Mac 上部署了第二个隔离的 Gateway 作为救援机器人。"
 source: "wechat"
-readingTime: "5 min"
+readingTime: 5
 ---
 
 > 本文基于 OpenClaw `2026.2.26` 版本，macOS arm64。

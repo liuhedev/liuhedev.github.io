@@ -67,6 +67,23 @@ const readNormalizedBody = (slug) =>
   matter(fs.readFileSync(path.join(postsDirectory, `${slug}.md`), 'utf8'))
     .content.replaceAll('https://liuhedev.github.io/images/', '/images/')
     .trim()
+
+const credentialScreenshotNames = [
+  'file-20260131215002593.png',
+  'file-20260131224255718.png',
+]
+const clawdbotSource = fs.readFileSync(
+  path.join(postsDirectory, '2026-01-31-5-clawdbot.md'),
+  'utf8',
+)
+for (const fileName of credentialScreenshotNames) {
+  assert(!clawdbotSource.includes(fileName), `${fileName} must not be publicly referenced`)
+  assert(
+    !fs.existsSync(path.join(process.cwd(), 'public', 'images', '2026-01-31', fileName)),
+    `${fileName} must not be included in the public build`,
+  )
+}
+
 assert.equal(
   readNormalizedBody(duplicateSlug),
   readNormalizedBody(canonicalSlug),

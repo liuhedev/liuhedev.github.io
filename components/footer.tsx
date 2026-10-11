@@ -73,8 +73,7 @@ export function Footer() {
           <div className="col-span-6 sm:col-span-3 lg:col-span-3 sm:text-right">
             <div className="meta mb-3">Colophon</div>
             <p className="text-xs text-muted leading-relaxed">
-              Set in <span className="font-display italic">Fraunces</span>,
-              IBM Plex Sans &amp; JetBrains Mono. Built with Next.js.
+              Set in Arial, PingFang SC &amp; system mono. Built with Next.js.
             </p>
             <p className="meta mt-3">© {new Date().getFullYear()} · 刘贺</p>
           </div>

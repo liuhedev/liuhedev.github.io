@@ -52,6 +52,27 @@ Markdown 内容...
 
 3. 保存后自动生成路由：`/posts/[slug]`
 
+## 公开文章索引
+
+构建会从文章 Front Matter 生成 `/articles.json`，供个人网站等公开页面读取。索引按日期倒序排列；日期相同时按 slug 稳定排序。
+
+```json
+{
+  "version": 1,
+  "articles": [
+    {
+      "title": "文章标题",
+      "url": "https://liuhedev.github.io/posts/example",
+      "date": "2026-01-27",
+      "dateType": "published",
+      "excerpt": "文章简介"
+    }
+  ]
+}
+```
+
+常规文章的 `date` 标记为 `published`。历史导入稿若提供 `writtenAt`，索引优先使用该值并标记为 `written`，避免把导入日期误作公众号首发日期。索引不包含正文或非公开字段。
+
 ## 项目结构
 
 ```

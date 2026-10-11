@@ -5,6 +5,25 @@ import { Post, PostMetadata } from '@/types/post'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
+function normalizeDate(value: unknown): string | null {
+  if (!value) return null
+  if (value instanceof Date) return value.toISOString().split('T')[0]
+  if (typeof value !== 'string') return null
+
+  const normalized = value.trim()
+  return /^\d{4}-\d{2}-\d{2}$/.test(normalized) ? normalized : null
+}
+
+function getPublicDate(data: Record<string, unknown>) {
+  const writtenAt = normalizeDate(data.writtenAt)
+  if (writtenAt) return { date: writtenAt, dateType: 'written' as const }
+
+  const publishedAt = normalizeDate(data.publishedAt) || normalizeDate(data.date)
+  if (publishedAt) return { date: publishedAt, dateType: 'published' as const }
+
+  return null
+}
+
 export function getAllPosts(): PostMetadata[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames
@@ -15,28 +34,14 @@ export function getAllPosts(): PostMetadata[] {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data } = matter(fileContents)
 
-      // 确保日期字段有效
-      let date = data.date
-      if (!date) {
-        // 如果没有日期字段，尝试从文件名中提取
-        const match = fileName.match(/(\d{4}-\d{2}-\d{2})/)
-        if (match) {
-          date = match[1]
-        } else {
-          // 默认日期为当前日期
-          date = new Date().toISOString().split('T')[0]
-        }
-      }
-      // 确保日期格式为字符串
-      if (typeof date !== 'string') {
-        date = date.toISOString().split('T')[0]
-      }
+      const publicDate = getPublicDate(data)
+      if (!publicDate) return null
 
       return {
         slug,
         title: data.title,
-        excerpt: data.excerpt,
-        date,
+        excerpt: data.excerpt || data.summary || data.description || '',
+        ...publicDate,
         readingTime: data.readingTime,
         tags: data.tags || [],
         source: data.source || 'wechat',
@@ -44,10 +49,9 @@ export function getAllPosts(): PostMetadata[] {
         coverImage: data.coverImage,
       } as PostMetadata
     })
-    // 过滤掉无效日期的文章
-    .filter(post => post.date && !isNaN(new Date(post.date).getTime()))
+    .filter((post): post is PostMetadata => post !== null)
 
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug))
 }
 
 export function getPostBySlug(slug: string): Post | null {
@@ -56,29 +60,15 @@ export function getPostBySlug(slug: string): Post | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // 确保日期字段有效
-    let date = data.date
-    if (!date) {
-      // 如果没有日期字段，尝试从文件名中提取
-      const match = slug.match(/(\d{4}-\d{2}-\d{2})/)
-      if (match) {
-        date = match[1]
-      } else {
-        // 默认日期为当前日期
-        date = new Date().toISOString().split('T')[0]
-      }
-    }
-    // 确保日期格式为字符串
-    if (typeof date !== 'string') {
-      date = date.toISOString().split('T')[0]
-    }
+    const publicDate = getPublicDate(data)
+    if (!publicDate) return null
 
     return {
       slug,
       title: data.title,
-      excerpt: data.excerpt,
+      excerpt: data.excerpt || data.summary || data.description || '',
       content,
-      date,
+      ...publicDate,
       readingTime: data.readingTime,
       tags: data.tags || [],
       source: data.source || 'wechat',

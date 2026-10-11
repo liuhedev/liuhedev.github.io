@@ -37,9 +37,6 @@ next-env.d.ts
 .agents/
 .claude/
 
-# 设计系统临时文件（开发时生成）
-design-system/
-
 # Python 缓存
 __pycache__/
 *.py[cod]
@@ -48,6 +45,7 @@ __pycache__/
 
 # 临时文档和笔记
 *.md.backup
+*.bak
 *.tmp
 *.log
 *.html

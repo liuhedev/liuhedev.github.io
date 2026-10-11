@@ -6,7 +6,7 @@
 
 - `content/posts/`：Markdown 文章，一篇文章一个文件；文件名即永久链接中的 slug。
 - `public/images/`：文章实际引用并随 GitHub Pages 发布的图片，Markdown 中使用 `/images/...`。
-- `assets/images/articles/`：未被当前文章引用的原始素材，不进入静态站点。
+- `docs/specs/DESIGN.md`：视觉与交互设计参考；实际实现以源码为准。
 
 公开文章索引由 Front Matter 自动生成到 `/articles.json`。设置 `listed: false` 可保留文章直链，但不进入首页、索引和 sitemap。
 

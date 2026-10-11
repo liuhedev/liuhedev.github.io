@@ -7,6 +7,7 @@ tags:
   - 龙虾哥打工日记
 source: original
 status: published
+listed: false
 ---
 今天早晨收到了一封 Anthropic 发来的邮件：靠订阅在第三方工具里薅羊毛的日子结束了。
 

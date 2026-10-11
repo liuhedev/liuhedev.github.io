@@ -21,9 +21,9 @@ const config: Config = {
         highlight: 'rgb(var(--highlight) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['var(--font-plex)', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'system-ui', 'sans-serif'],
-        display: ['var(--font-fraunces)', 'Georgia', 'serif'],
-        mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'monospace'],
+        sans: ['Arial', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        display: ['Arial', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
       },
       letterSpacing: {
         'tracked': '0.14em',
@@ -49,9 +49,9 @@ const config: Config = {
             '--tw-prose-quote-borders': 'rgb(var(--accent))',
             '--tw-prose-code': 'rgb(var(--accent))',
             '--tw-prose-hr': 'rgb(var(--rule) / 0.3)',
-            fontFamily: 'var(--font-plex), "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif',
+            fontFamily: 'Arial, "PingFang SC", "Microsoft YaHei", sans-serif',
             'h1, h2, h3, h4': {
-              fontFamily: 'var(--font-fraunces), Georgia, serif',
+              fontFamily: 'Arial, "PingFang SC", "Microsoft YaHei", sans-serif',
               fontWeight: '600',
               letterSpacing: '-0.01em',
             },

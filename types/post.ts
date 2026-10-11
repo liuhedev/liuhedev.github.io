@@ -4,9 +4,10 @@ export interface Post {
   excerpt: string
   content: string
   date: string
+  dateType: 'published' | 'written'
   readingTime: number
   tags: string[]
-  source: 'feishu' | 'wechat' | 'github'
+  source: string
   sourceUrl?: string
   coverImage?: string
 }
@@ -16,9 +17,10 @@ export interface PostMetadata {
   title: string
   excerpt: string
   date: string
+  dateType: 'published' | 'written'
   readingTime: number
   tags: string[]
-  source: 'feishu' | 'wechat' | 'github'
+  source: string
   sourceUrl?: string
   coverImage?: string
 }

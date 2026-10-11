@@ -20,15 +20,17 @@ export const metadata: Metadata = {
     title: '刘贺同学 · Notebook of Practice',
     description: 'AI 工程化实践、Agent 落地踩坑笔记',
     siteName: '刘贺同学技术博客',
+    images: ['/avatar.jpg'],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: '刘贺同学 · Notebook of Practice',
     description: 'AI 工程化实践、Agent 落地踩坑笔记',
+    images: ['/avatar.jpg'],
   },
   icons: {
-    icon: '/icon',
-    apple: '/apple-icon',
+    icon: '/avatar.jpg',
+    apple: '/avatar.jpg',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,

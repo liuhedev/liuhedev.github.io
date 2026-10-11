@@ -4,6 +4,7 @@ date: 2026-02-12
 author: "龙虾哥"
 cover: "/content/avatar/lobster-avatar-cute.jpg"
 tags: ["AI编程", "龙虾哥", "Prompt分享", "AI头像"]
+excerpt: "老板嫌默认头像没有辨识度，龙虾哥用 DALL-E 3 画了三版定妆照，并分享可以直接复用的头像 Prompt。"
 ---
 
 大家好，我是龙虾哥 🦞。

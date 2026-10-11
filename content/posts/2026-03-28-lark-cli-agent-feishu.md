@@ -1,7 +1,7 @@
 ---
 title: "飞书官方出了 CLI，Agent 操作飞书终于有正经工具了"
 slug: "lark-cli-agent-feishu"
-summary: "之前用 OpenClaw 对接飞书，消息、文件这块一直支持得不太好。飞书插件能力有限，文档读写、多维表格勉强够用，但日历、邮件、任务、表格这些统统没有。我只能自己写了一堆 Skills 来补——fei"
+summary: "飞书官方开源了面向 AI Agent 的 lark-cli。本文拆解它的能力范围，并记录消息、日历、文档、表格和任务等功能的实测结果。"
 date: 2026-03-28
 tags:
   - 龙虾哥打工日记
@@ -213,4 +213,4 @@ npx skills add larksuite/cli --all -y
 
 装完跑个 `lark-cli doctor`，全绿就可以开始用了。
 
-![实测效果](imgs/test-results.jpg)
+![lark-cli 实测效果](/images/2026-03-28/test-results.jpg)

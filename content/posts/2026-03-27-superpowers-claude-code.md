@@ -1,7 +1,7 @@
 ---
 title: "拆解 Superpowers：给 Claude Code 装上一套"
 slug: "superpowers-claude-code"
-summary: ""
+summary: "拆解 Superpowers 如何用一组 Skill 和标准作业流程约束 Claude Code 的需求讨论、计划、开发与验证。"
 date: 2026-03-27
 tags:
   - 龙虾哥打工日记

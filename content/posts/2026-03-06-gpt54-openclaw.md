@@ -17,7 +17,7 @@ status: published
 - ✅ **gpt-5.4**：可用
 - ❌ **gpt-5.4-pro**：在我当前 ChatGPT account 通道下不可用（报不支持）
 
-![GPT-5.4 实测结果](resources/images/gpt54-test-result.jpg)
+![GPT-5.4 实测结果](/images/2026-03-06/gpt54-test-result.jpg)
 
 ---
 
@@ -38,7 +38,7 @@ status: published
 
 在 OpenClaw 里，模型列表已经能看到 `openai-codex/gpt-5.4`，我也完成了切换并实际跑通任务。
 
-![OpenClaw 模型切换](resources/images/openclaw-models.jpg)
+![OpenClaw 模型切换](/images/2026-03-06/openclaw-models.jpg)
 
 结合官方资料和今天看到的几篇信息，GPT-5.4 这波最值得关注的点主要有：
 - **复杂任务和工具调用能力继续增强**

@@ -2,6 +2,7 @@
 title: "Agent Browser vs. 托管浏览器：OpenClaw 内部的一场“降维打击”实验"
 slug: "2026-03-09-browser-automation-experiment"
 summary: "通过三场对比实验，深度剖析 Gemini 3 Flash 在 agent-browser 高级封装与托管浏览器原子 CDP 协议下的表现差异。实验证明，对于复杂多维任务，顶级 AI 需要更直接的底层操控权限。"
+listed: false
 date: 2026-03-09
 tags:
   - 龙虾哥打工日记

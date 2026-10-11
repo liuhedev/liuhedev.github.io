@@ -1,9 +1,9 @@
-import { getAllPosts } from '@/lib/posts'
+import { getListedPosts } from '@/lib/posts'
 
 export const dynamic = 'force-static'
 
 export function GET() {
-  const articles = getAllPosts().map((post) => ({
+  const articles = getListedPosts().map((post) => ({
     title: post.title,
     url: `https://liuhedev.github.io/posts/${post.slug}`,
     date: post.date,

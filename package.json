@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "verify:index": "node scripts/verify-article-index.mjs",
     "start": "next start",
     "lint": "next lint"
   },

@@ -47,11 +47,16 @@ export function getAllPosts(): PostMetadata[] {
         source: data.source || 'wechat',
         sourceUrl: data.sourceUrl,
         coverImage: data.coverImage,
+        listed: data.listed !== false,
       } as PostMetadata
     })
     .filter((post): post is PostMetadata => post !== null)
 
   return allPostsData.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug))
+}
+
+export function getListedPosts(): PostMetadata[] {
+  return getAllPosts().filter((post) => post.listed)
 }
 
 export function getPostBySlug(slug: string): Post | null {
@@ -81,7 +86,7 @@ export function getPostBySlug(slug: string): Post | null {
 }
 
 export function getRelatedPosts(currentSlug: string, tags: string[], limit = 3): PostMetadata[] {
-  const allPosts = getAllPosts()
+  const allPosts = getListedPosts()
 
   return allPosts
     .filter((post) => post.slug !== currentSlug)

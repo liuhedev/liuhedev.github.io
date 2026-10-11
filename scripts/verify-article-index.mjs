@@ -145,6 +145,12 @@ assert(!sitemap.includes(`/posts/${archivedSlug}`))
 
 const homePage = fs.readFileSync(path.join(outputDirectory, 'index.html'), 'utf8')
 assert(homePage.includes('>44 篇</dd>'))
+assert.equal(
+  [...homePage.matchAll(/href="\/posts\//g)].length,
+  10,
+  'the homepage must initially render the latest 10 articles',
+)
+assert.match(homePage, /查看更多（已显示 .*10.* \/ .*44.*）/)
 assert(!homePage.includes('文章由 Markdown 驱动'))
 assert(!homePage.includes('href="/icon"'))
 assert(!homePage.includes('href="/apple-icon"'))

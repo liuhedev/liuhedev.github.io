@@ -5,12 +5,15 @@ import { useMemo, useState } from 'react'
 import { ArrowUpRight, Search } from 'lucide-react'
 import type { PostMetadata } from '@/types/post'
 
+const pageSize = 10
+
 function dateLabel(type: PostMetadata['dateType']) {
   return type === 'written' ? '写作日期' : '发布日期'
 }
 
 export function IndexBoard({ posts }: { posts: PostMetadata[] }) {
   const [query, setQuery] = useState('')
+  const [visibleCount, setVisibleCount] = useState(pageSize)
   const filtered = useMemo(() => {
     const needle = query.trim().toLocaleLowerCase('zh-CN')
     if (!needle) return posts
@@ -18,6 +21,7 @@ export function IndexBoard({ posts }: { posts: PostMetadata[] }) {
       `${post.title} ${post.excerpt} ${post.tags.join(' ')}`.toLocaleLowerCase('zh-CN').includes(needle),
     )
   }, [posts, query])
+  const visiblePosts = filtered.slice(0, visibleCount)
 
   const years = useMemo(() => {
     const counts = new Map<string, number>()
@@ -37,13 +41,20 @@ export function IndexBoard({ posts }: { posts: PostMetadata[] }) {
             <label className="search-field">
               <Search aria-hidden size={16} />
               <span className="sr-only">搜索文章</span>
-              <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索标题、摘要或标签" />
+              <input
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value)
+                  setVisibleCount(pageSize)
+                }}
+                placeholder="搜索标题、摘要或标签"
+              />
             </label>
           </div>
 
           {filtered.length ? (
             <ol className="divide-y divide-rule-soft">
-              {filtered.map((post) => (
+              {visiblePosts.map((post) => (
                 <li key={post.slug}>
                   <Link href={`/posts/${post.slug}`} className="article-row group">
                     <div className="min-w-0">
@@ -61,6 +72,17 @@ export function IndexBoard({ posts }: { posts: PostMetadata[] }) {
                   </Link>
                 </li>
               ))}
+              {visibleCount < filtered.length ? (
+                <li className="pt-6">
+                  <button
+                    className="w-full border border-rule px-5 py-3 text-sm font-medium transition-colors hover:border-accent hover:text-accent sm:w-auto"
+                    type="button"
+                    onClick={() => setVisibleCount((count) => count + pageSize)}
+                  >
+                    查看更多（已显示 {visiblePosts.length} / {filtered.length}）
+                  </button>
+                </li>
+              ) : null}
             </ol>
           ) : (
             <p className="py-16 text-center text-muted">没有找到匹配的文章。</p>

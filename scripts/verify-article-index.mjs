@@ -15,6 +15,7 @@ const sourceFiles = fs.readdirSync(postsDirectory).filter((fileName) => fileName
 const hiddenSlugs = sourceFiles
   .filter((fileName) => matter(fs.readFileSync(path.join(postsDirectory, fileName), 'utf8')).data.listed === false)
   .map((fileName) => fileName.replace(/\.md$/, ''))
+  .sort()
 
 assert.equal(sourceFiles.length, 46, 'unexpected source article count')
 assert.deepEqual(hiddenSlugs, [duplicateSlug, archivedSlug], 'unexpected hidden article set')

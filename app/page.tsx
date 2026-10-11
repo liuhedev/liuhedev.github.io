@@ -19,7 +19,7 @@ export default function Home() {
                 把实践写下来，<span className="text-accent">让经验可以复用。</span>
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-ink-soft sm:text-lg">
-                软件工程、AI Agent 与真实工作流的长期笔记。文章由 Markdown 驱动，记录做法、判断和踩过的坑。
+                软件工程、AI Agent 与真实工作流的长期笔记。记录做法、判断和踩过的坑。
               </p>
             </div>
             <dl className="grid grid-cols-2 gap-6 border-t border-rule-soft pt-6 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">

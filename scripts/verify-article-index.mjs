@@ -34,6 +34,10 @@ assert.equal(
 for (const article of index.articles) {
   assert.match(article.date, /^\d{4}-\d{2}-\d{2}$/)
   assert(['published', 'written'].includes(article.dateType))
+  assert(
+    article.title.trim() && !/^(untitled|todo|tbd|待定|无标题)$/i.test(article.title.trim()),
+    `public article has an empty or placeholder title: ${article.url}`,
+  )
 }
 
 const urls = index.articles.map((article) => article.url)

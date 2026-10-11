@@ -45,6 +45,7 @@ __pycache__/
 
 # 临时文档和笔记
 *.md.backup
+*.bak
 *.tmp
 *.log
 *.html

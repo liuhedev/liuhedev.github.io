@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
@@ -160,7 +161,13 @@ assert(!homePage.includes('Colophon'))
 assert(!homePage.includes('Built with Next.js'))
 assert(footerSource.includes('https://my.feishu.cn/wiki/YjJ6wh9v9iLDc2kfvdMcoMsrn2g'))
 assert(footerSource.includes('/contacts/wechat-qrcode.png'))
-assert(fs.existsSync(path.join(process.cwd(), 'public', 'contacts', 'wechat-qrcode.png')))
+const wechatQrPath = path.join(process.cwd(), 'public', 'contacts', 'wechat-qrcode.png')
+assert(fs.existsSync(wechatQrPath))
+assert.equal(
+  createHash('sha256').update(fs.readFileSync(wechatQrPath)).digest('hex'),
+  'c918cc10e837355edeb4cd96bbca6e84432e7aed370dc89b4facef8d137fab09',
+  'the current WeChat QR image must remain published',
+)
 assert(!homePage.includes('href="/icon"'))
 assert(!homePage.includes('href="/apple-icon"'))
 

@@ -142,14 +142,14 @@ export function Footer() {
               <p className="mt-2 text-sm leading-6 text-ink-soft">微信扫码关注；手机上可长按二维码保存。</p>
             </div>
             <Image
-              src="/contacts/wechat-qrcode.png"
+              src="/contacts/wechat-qrcode.png?v=c918cc10"
               alt="微信公众号刘贺同学二维码"
-              width={1710}
-              height={624}
+              width={2076}
+              height={758}
               className="mt-6 h-auto w-full rounded-sm border border-rule-soft"
             />
             <a
-              href="/contacts/wechat-qrcode.png"
+              href="/contacts/wechat-qrcode.png?v=c918cc10"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"

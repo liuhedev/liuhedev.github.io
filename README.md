@@ -6,11 +6,11 @@
 
 - **框架**: Next.js 14 (App Router)
 - **样式**: Tailwind CSS 3.4
-- **字体**: Space Grotesk + DM Sans
+- **字体**: Arial + 苹方 / 微软雅黑 + 系统等宽字体
 - **图标**: Lucide Icons
 - **Markdown**: react-markdown + rehype-highlight
 - **主题**: next-themes (深色模式)
-- **部署**: Vercel
+- **部署**: GitHub Pages（静态导出）
 
 ## 本地开发
 
@@ -43,6 +43,8 @@ excerpt: "文章摘要，用于首页卡片展示"
 tags: ["标签1", "标签2"]
 source: "wechat"  # feishu | wechat | github
 readingTime: 8
+# 历史稿使用 writtenAt: "2026-01-20"，避免把导入日当发布日期
+# listed: false 仅用于保留直链但不进入首页、索引和 sitemap 的归档稿
 ---
 
 # 文章正文
@@ -51,6 +53,7 @@ Markdown 内容...
 ```
 
 3. 保存后自动生成路由：`/posts/[slug]`
+4. 运行 `npm run build && npm run verify:index`，验证文章页、公开索引、排序和归档规则
 
 ## 公开文章索引
 

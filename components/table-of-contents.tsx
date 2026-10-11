@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 interface TocItem {
   id: string
@@ -12,7 +12,7 @@ export function TableOfContents({ content }: { content: string }) {
   const [activeId, setActiveId] = useState('')
   
   // 从 markdown 提取 headings
-  const headings: TocItem[] = content
+  const headings = useMemo(() => content
     .split('\n')
     .filter(line => /^#{2,4}\s/.test(line))
     .map(line => {
@@ -25,7 +25,7 @@ export function TableOfContents({ content }: { content: string }) {
         .replace(/^-|-$/g, '')
       return { id, text, level: match[1].length }
     })
-    .filter(Boolean) as TocItem[]
+    .filter(Boolean) as TocItem[], [content])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,9 +50,9 @@ export function TableOfContents({ content }: { content: string }) {
   if (headings.length < 2) return null
 
   return (
-    <nav className="hidden xl:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-      <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-3">目录</p>
-      <ul className="space-y-1.5 text-sm border-l border-zinc-200 dark:border-zinc-700">
+    <nav className="toc" aria-label="文章目录">
+      <p className="meta mb-4">目录</p>
+      <ul className="space-y-1.5 border-l border-rule-soft text-sm">
         {headings.map(({ id, text, level }) => (
           <li key={id}>
             <a
@@ -65,8 +65,8 @@ export function TableOfContents({ content }: { content: string }) {
                 level === 2 ? 'pl-4' : level === 3 ? 'pl-8' : 'pl-12'
               } ${
                 activeId === id
-                  ? 'text-blue-600 dark:text-blue-400 border-l-2 border-blue-600 dark:border-blue-400 -ml-px font-medium'
-                  : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200'
+                  ? 'text-accent border-l-2 border-accent -ml-px font-medium'
+                  : 'text-muted hover:text-ink'
               }`}
             >
               {text}

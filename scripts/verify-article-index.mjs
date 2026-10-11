@@ -66,6 +66,6 @@ assert(!sitemap.includes(`/posts/${duplicateSlug}`))
 assert(!sitemap.includes(`/posts/${archivedSlug}`))
 
 const homePage = fs.readFileSync(path.join(outputDirectory, 'index.html'), 'utf8')
-assert(homePage.includes('>44</span> 篇'))
+assert(homePage.includes('>44 篇</dd>'))
 
 console.log('Verified 44 unique listed articles; hidden legacy routes remain built.')

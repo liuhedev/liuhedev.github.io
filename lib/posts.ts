@@ -15,11 +15,16 @@ function normalizeDate(value: unknown): string | null {
 }
 
 function getPublicDate(data: Record<string, unknown>) {
+  // An explicit publication date is authoritative when both dates exist.
+  const publishedAt = normalizeDate(data.publishedAt)
+  if (publishedAt) return { date: publishedAt, dateType: 'published' as const }
+
   const writtenAt = normalizeDate(data.writtenAt)
   if (writtenAt) return { date: writtenAt, dateType: 'written' as const }
 
-  const publishedAt = normalizeDate(data.publishedAt) || normalizeDate(data.date)
-  if (publishedAt) return { date: publishedAt, dateType: 'published' as const }
+  // `date` is the legacy publication field used by existing posts.
+  const legacyPublishedAt = normalizeDate(data.date)
+  if (legacyPublishedAt) return { date: legacyPublishedAt, dateType: 'published' as const }
 
   return null
 }

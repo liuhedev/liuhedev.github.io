@@ -11,6 +11,10 @@
 
 公开文章索引由 Front Matter 自动生成到 `/articles.json`。设置 `listed: false` 可保留文章直链，但不进入首页、索引和 sitemap。
 
+## 小工具合集
+
+[工具首页](https://liuhedev.github.io/tools/) 支持分类和关键词搜索，工具各自独立加载。新增工具放入 `public/tools/<slug>/`，在 `public/tools/index.html` 添加一张 `.tool` 卡片并填写地址、`data-category` 和 `data-keywords`；分类按钮自动生成。HTML 入口需在 `.gitignore` 中显式放行。示例使用虚构数据，不提交生产报文或凭证。
+
 ## 新增或修改文章
 
 在 `content/posts/` 新建或编辑 Markdown，例如：

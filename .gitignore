@@ -50,6 +50,7 @@ __pycache__/
 *.log
 *.html
 !public/tools/nginx-decoder/index.html
+!public/tools/index.html
 *.html.bak*
 
 # IDE 配置

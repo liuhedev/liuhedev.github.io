@@ -12,6 +12,7 @@ export function SiteHeader() {
           <span className="meta hidden sm:inline">技术博客</span>
         </Link>
         <nav className="flex items-center gap-2" aria-label="主要导航">
+          <a className="header-link inline-flex" href="/tools/">小工具</a>
           <a className="header-link hidden sm:inline-flex" href="https://liuhe.abloomvole8.chatgpt.site">个人网站</a>
           <a className="header-link hidden sm:inline-flex" href="https://github.com/liuhedev">GitHub</a>
           <ThemeToggle />

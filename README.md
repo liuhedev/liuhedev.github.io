@@ -7,6 +7,7 @@
 - `content/posts/`：Markdown 文章，一篇文章一个文件；文件名即永久链接中的 slug。
 - `public/images/`：文章实际引用并随 GitHub Pages 发布的图片，Markdown 中使用 `/images/...`。
 - `docs/specs/DESIGN.md`：视觉与交互设计参考；实际实现以源码为准。
+- `public/tools/nginx-decoder/`：独立、无依赖的 [Nginx 日志解码工具](https://liuhedev.github.io/tools/nginx-decoder/)，支持十六进制转义、UTF-8 中文与 JSON 格式化。输入仅在浏览器内存中处理，不上传、不持久化；格式化保留长数字 ID 的精度。可单独用静态 HTTP 服务预览此目录。
 
 公开文章索引由 Front Matter 自动生成到 `/articles.json`。设置 `listed: false` 可保留文章直链，但不进入首页、索引和 sitemap。
 

@@ -13,11 +13,11 @@
 <body>
   <main>
     <nav aria-label="导航"><a class="brand" href="/tools/">刘贺的小工具</a><a href="/">技术博客 ↗</a></nav>
-    <header><h1>日常工具，打开就用。</h1><p>把重复的小事交给工具，留点时间处理真正的问题。</p></header>
+    <header><h1>小工具</h1><p>在线工具可直接使用。本地工具的源码和安装说明在 GitHub。</p></header>
     <section class="finder" aria-label="查找工具">
       <label for="search">找个工具</label>
       <input id="search" type="search" placeholder="搜索名称或用途，例如 JSON、日志、中文…" autocomplete="off" spellcheck="false">
-      <div class="filter-row"><div id="categories" aria-label="工具分类"><button type="button" data-category="" aria-pressed="true">全部</button></div><span id="count" role="status" aria-live="polite">1 个工具</span></div>
+      <div class="filter-row"><div id="categories" aria-label="工具分类"><button type="button" data-category="" aria-pressed="true">全部</button></div><span id="count" role="status" aria-live="polite">3 个工具</span></div>
     </section>
     <section class="cards" aria-label="工具列表">
       <a class="tool" href="./nginx-decoder/" data-category="日志与编码" data-keywords="nginx x22 utf8 utf-8 json decode request_body 转义 中文 编码">
@@ -25,6 +25,18 @@
         <h2>日志解码<span aria-hidden="true">↗</span></h2>
         <p>还原 Nginx 的 \x22、UTF-8 中文和多层 JSON。粘贴后自动解码，支持复制和下载。</p>
         <div class="tool-foot"><span>本地处理</span><span>无依赖</span></div>
+      </a>
+      <a class="tool" href="https://github.com/liuhedev/photo-time-fixer" data-category="图片与视频" data-keywords="照片 图片 EXIF 时间 修复 文件名 Python">
+        <div class="tool-top"><span class="tag">图片与视频</span></div>
+        <h2>照片时间修复<span aria-hidden="true">↗</span></h2>
+        <p>从文件名读取拍摄时间，写入照片的 EXIF 元数据。</p>
+        <div class="tool-foot"><span>本地运行</span><span>查看源码和说明</span></div>
+      </a>
+      <a class="tool" href="https://github.com/liuhedev/picture-book-creator" data-category="图片与视频" data-keywords="视频 图片 绘本 抽帧 课件 Python Flask">
+        <div class="tool-top"><span class="tag">图片与视频</span></div>
+        <h2>视频提取图片<span aria-hidden="true">↗</span></h2>
+        <p>将视频转成图片序列，提取课件页面、绘本素材或关键画面。</p>
+        <div class="tool-foot"><span>本地运行</span><span>查看源码和说明</span></div>
       </a>
     </section>
     <div id="empty" hidden><h2>没有找到匹配的工具</h2><p>换个关键词，或清除筛选查看全部工具。</p><button id="reset" type="button">清除筛选</button></div>

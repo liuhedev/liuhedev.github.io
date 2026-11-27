@@ -3,38 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="轻量 Nginx 日志解码工具。还原十六进制转义、UTF-8 中文和 JSON，全部在浏览器本地处理。">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>日志解码 · 刘贺的小工具</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./decoder.js"></script>
+  <meta http-equiv="refresh" content="0; url=https://liuhedev.github.io/web-tools/nginx-decoder/">
+  <link rel="canonical" href="https://liuhedev.github.io/web-tools/nginx-decoder/">
+  <title>打开日志解码 · 刘贺</title>
 </head>
 <body>
-  <main>
-    <nav aria-label="导航"><a href="/tools/">刘贺的小工具</a><a class="source-link" href="https://github.com/liuhedev/liuhedev.github.io/tree/main/public/tools/nginx-decoder" target="_blank" rel="noopener noreferrer">查看源码 ↗</a></nav>
-    <header>
-      <div><h1>日志解码</h1><p>把 Nginx 的 <code>\x22</code>、中文转义和多层 JSON，还原成可读的文字。</p></div>
-      <span class="local-badge"><span aria-hidden="true">●</span> 浏览器本地处理</span>
-    </header>
-    <div class="toolbar">
-      <div class="actions"><button id="sample" type="button">试用示例</button><button id="clear" type="button">清空</button></div>
-      <button class="primary" id="decode" type="button">解码并格式化 <kbd>⌘ / Ctrl ↵</kbd></button>
-    </div>
-    <section class="editors" aria-label="日志解码工作区">
-      <div class="editor">
-        <div class="editor-heading"><label for="input">原始日志</label><span id="input-count">0 字符</span></div>
-        <textarea id="input" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="在这里粘贴 request_body 的值…&#10;&#10;{\x22message\x22:\x22\xE4\xBD\xA0\xE5\xA5\xBD\x22}"></textarea>
-        <div class="editor-foot">粘贴后自动解码，也支持带外层引号的 JSON 字符串。</div>
-      </div>
-      <div class="editor output-editor">
-        <div class="editor-heading"><label for="output">解码结果</label><div class="actions"><button id="copy" type="button" disabled>复制</button><button id="download" type="button" disabled>下载</button></div></div>
-        <textarea id="output" readonly spellcheck="false" aria-describedby="status" placeholder="解码后的内容会显示在这里。"></textarea>
-        <div class="editor-foot" id="output-count">等待输入</div>
-      </div>
-    </section>
-    <div id="status" class="status" role="status" aria-live="polite">支持 \xNN 十六进制转义、UTF-8 中文、JSON 字符串解包和 JSON 格式化。</div>
-    <footer><span>内容不上传、不存储；刷新或清空后不保留。</span><span>无依赖，无需登录。</span></footer>
-  </main>
+  <p><a href="https://liuhedev.github.io/web-tools/nginx-decoder/">打开日志解码</a></p>
 </body>
 </html>

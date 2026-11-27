@@ -7,13 +7,13 @@
 - `content/posts/`：Markdown 文章，一篇文章一个文件；文件名即永久链接中的 slug。
 - `public/images/`：文章实际引用并随 GitHub Pages 发布的图片，Markdown 中使用 `/images/...`。
 - `docs/specs/DESIGN.md`：视觉与交互设计参考；实际实现以源码为准。
-- `public/tools/nginx-decoder/`：独立、无依赖的 [Nginx 日志解码工具](https://liuhedev.github.io/tools/nginx-decoder/)，支持十六进制转义、UTF-8 中文与 JSON 格式化。输入仅在浏览器内存中处理，不上传、不持久化；格式化保留长数字 ID 的精度。可单独用静态 HTTP 服务预览此目录。
+- `public/tools/` 保留旧版工具链接，转到独立的工具站。
 
 公开文章索引由 Front Matter 自动生成到 `/articles.json`。设置 `listed: false` 可保留文章直链，但不进入首页、索引和 sitemap。
 
 ## 小工具合集
 
-[工具首页](https://liuhedev.github.io/tools/) 支持分类和关键词搜索，工具各自独立加载。新增工具放入 `public/tools/<slug>/`，在 `public/tools/index.html` 添加一张 `.tool` 卡片并填写地址、`data-category` 和 `data-keywords`；分类按钮自动生成。HTML 入口需在 `.gitignore` 中显式放行。示例使用虚构数据，不提交生产报文或凭证。
+工具站支持分类和关键词搜索，提供日志解码、照片时间修复和视频抽帧。代码在独立仓库维护。 [工具首页](https://liuhedev.github.io/web-tools/) · [工具仓库](https://github.com/liuhedev/web-tools)
 
 ## 新增或修改文章
 
